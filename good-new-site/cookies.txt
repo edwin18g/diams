@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+gracethemesdemo.com	TRUE	/the-church/	FALSE	1999999999	wp_woocommerce_session_c42fabf21c159528f295a77c27e5db04	t_137e5e8441959ba85db6817bb2ab6e%7C%7C1706804058%7C%7C1706800458%7C%7C802cb0c251a3f3dac6712ed50f665c7b
+gracethemesdemo.com	TRUE	/the-church/	FALSE	1999999999	wordpress_test_cookie	WP%20Cookie%20check
+gracethemesdemo.com	TRUE	/the-church/	FALSE	1999999999	woocommerce_items_in_cart	1
+gracethemesdemo.com	TRUE	/the-church/	FALSE	1999999999	woocommerce_cart_hash	8d8e9f6957c163f5a0c558925432b4d2
+
