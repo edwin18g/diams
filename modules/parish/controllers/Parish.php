@@ -51,7 +51,7 @@ class Parish extends CI_Controller
 	function index($slug = null, $limit = 10, $offset = 0)
 	{
 		
-		
+	
 	
 		$keyword              = ($this->input->post('keyword') != null)?$this->input->post('keyword'):(($_GET['keyword'])?$_GET['keyword']:false);
 		$type     						= ($this->input->post('slug'))?$this->input->post('slug'):(($_GET['slug'])?$_GET['slug']:0);

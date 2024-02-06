@@ -41,6 +41,7 @@ class User extends CI_Controller
 	
 	function index()
 	{
+		
 		$slug		= $this->uri->segment(1);
 		$type		= $this->uri->segment(2);
 		$limit		= $this->uri->segment(3);
@@ -313,6 +314,9 @@ class User extends CI_Controller
 		else
 		{
 			$this->template->set_partial('navigation', 'dashboard_navigation');
+			
+			$this->template->set_theme('admin');
+			$this->template->set_layout('admin');
 			$this->template->build('dashboard', $data);
 		}
 	}

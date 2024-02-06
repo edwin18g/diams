@@ -39,6 +39,7 @@ class Users extends CI_Controller
 	
 	function index($slug = null, $limit = 10, $offset = 0)
 	{
+		
 		if($this->input->post('hash'))
 		{
 			$this->form_validation->set_rules('query', phrase('keywords'), 'trim|required|xss_clean|max_length[20]|alpha');

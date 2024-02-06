@@ -41,6 +41,8 @@ class Users extends CI_Controller
 	
 	function index()
 	{
+
+		
 		if(!$this->session->userdata('loggedIn') && $this->session->userdata('user_level') != 1) return error(403, ($this->input->is_ajax_request() ? 'ajax' : null));
 		
 		$data['meta']		= array(

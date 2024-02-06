@@ -268,6 +268,87 @@ class Template
 		return $this->_body;
 	}
 
+	public function adminBuild($view, $data = array(), $return = FALSE)
+	{
+		die('layouts/'.$this->_layout);
+		// Set whatever values are given. These will be available to all view files
+		is_array($data) OR $data = (array) $data;
+
+		// Merge in what we already have with the specific data
+		$this->_data = array_merge($this->_data, $data);
+
+		// We don't need you any more buddy
+		unset($data);
+
+		if (empty($this->_title))
+		{
+			$this->_title = $this->_guess_title();
+		}
+
+		// Output template variables to the template
+		$template['title']	= $this->_title;
+		$template['breadcrumbs'] = $this->_breadcrumbs;
+		$template['metadata']	= implode("\n\t\t", $this->_metadata);
+		$template['partials']	= array();
+
+		// Assign by reference, as all loaded views will need access to partials
+		$this->_data['template'] =& $template;
+
+		foreach ($this->_partials as $name => $partial)
+		{
+			// We can only work with data arrays
+			is_array($partial['data']) OR $partial['data'] = (array) $partial['data'];
+
+			// If it uses a view, load it
+			if (isset($partial['view']))
+			{
+				$template['partials'][$name] = $this->_find_view($partial['view'], $partial['data']);
+			}
+
+			// Otherwise the partial must be a string
+			else
+			{
+				if ($this->_parser_enabled === TRUE)
+				{
+					$partial['string'] = $this->_ci->parser->parse_string($partial['string'], $this->_data + $partial['data'], TRUE, TRUE);
+				}
+
+				$template['partials'][$name] = $partial['string'];
+			}
+		}
+
+		// Disable sodding IE7's constant cacheing!!
+		$this->_ci->output->set_header('Expires: Sat, 01 Jan 2000 00:00:01 GMT');
+		$this->_ci->output->set_header('Cache-Control: no-store, no-cache, must-revalidate');
+		$this->_ci->output->set_header('Cache-Control: post-check=0, pre-check=0, max-age=0');
+		$this->_ci->output->set_header('Last-Modified: ' . gmdate( 'D, d M Y H:i:s' ) . ' GMT' );
+		$this->_ci->output->set_header('Pragma: no-cache');
+
+		// Let CI do the caching instead of the browser
+		$this->_ci->output->cache($this->cache_lifetime);
+
+		// Test to see if this file
+		$this->_body = $this->_find_view($view, array(), $this->_parser_body_enabled);
+
+		// Want this file wrapped with a layout file?
+		if ($this->_layout)
+		{
+			// Added to $this->_data['template'] by refference
+			$template['body'] = $this->_body;
+
+			// Find the main body and 3rd param means parse if its a theme view (only if parser is enabled)
+			$this->_body =  self::_load_view('layouts/'.$this->_layout, $this->_data, TRUE, self::_find_view_folder());
+		}
+
+		// Want it returned or output to browser?
+		if ( ! $return)
+		{
+			$this->_ci->output->set_output($this->_body);
+		}
+
+		return $this->_body;
+	}
+
 	/**
 	 * Set the title of the page
 	 *
