@@ -6,6 +6,7 @@ class User_model extends CI_Model
 	function __construct()
 	{
 		parent::__construct();
+		$this->a_type = array(1=>'Bishop',2=>'Diocesan Service Team',3=>'College of Consulters');
 	}
 	
 	function getOwnProfile()
@@ -331,4 +332,55 @@ class User_model extends CI_Model
 		
 		return $query->result();
 	}
+
+	function getAllPriestData($param) {
+		$this->db->select('*');
+        $data =  $this->db->get('users')->result_array();
+
+        return $data;
+	}
+
+	function getAllParishData($param) {		
+        $data =  $this->db->get('parish')->result_array();
+
+        return $data;
+	}
+
+	function getAllAdministrationData($param) {		
+        $data =  $this->db->get('administration')->result_array();
+
+        return $data;
+	}
+	
+	 function getAllPriestAdministration(){
+		$this->db->select('users.full_name,users.userID,users.photo');
+        $data =  $this->db->get('users')->result_array();
+		return $data;
+	 }
+	function getAdministrationData()
+	{
+		$this->db->select('administration.*,users.*');
+		$this->db->join('users', 'administration.a_user_id = users.userID', 'left');
+		$this->db->order_by('administration.a_type', 'ASC');
+		$query = $this->db->get('administration');
+		return $query->result_array();
+	}
+
+	function addAdministration($param) {
+		if($this->db->insert('administration', $param))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	function deleteAdministrationPriest($id){
+		$this->db->where('id', $id);
+        return $this->db->delete('administration');
+	}
+
+	
 }
