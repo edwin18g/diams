@@ -315,8 +315,12 @@ class User extends CI_Controller
 		{
 			$this->template->set_partial('navigation', 'dashboard_navigation');
 			
-			$this->template->set_theme('admin');
-			$this->template->set_layout('admin');
+			$layout = 'admin';
+			if(!empty($_GET['layout'])){
+				$layout = 'default';
+			}
+			$this->template->set_theme($layout);
+			$this->template->set_layout($layout);
 			$this->template->build('dashboard', $data);
 		}
 	}

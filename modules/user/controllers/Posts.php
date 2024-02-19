@@ -66,7 +66,14 @@ class Posts extends CI_Controller
 		else
 		{
 			$this->template->set_partial('navigation', 'dashboard_navigation');
+			$layout = 'admin';
+			if(!empty($_GET['layout'])){
+				$layout = 'default';
+			}
+			$this->template->set_theme($layout);
+			$this->template->set_layout($layout);
 			$this->template->build('posts/posts', $data);
+			// $this->template->build('dashboard', $data);
 		}
 	}
 	

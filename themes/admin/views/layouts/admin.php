@@ -903,7 +903,7 @@ Contact: contact@hencework.com
 		</div>
         <div id="hk_menu_backdrop" class="hk-menu-backdrop"></div>
         <!-- /Vertical Nav -->
-
+		<?php echo $template['body']; ?>	
 		<!-- Chat Popup -->
 		<div class="hk-chatbot-popup">
 			<header>
@@ -1075,7 +1075,7 @@ Contact: contact@hencework.com
 		<!-- Main Content -->
 		<div class="hk-pg-wrapper">
 			<div class="container-xxl">
-			<?php echo $template['body']; ?>	
+			
 			</div>
 			
 			<!-- Page Footer -->
