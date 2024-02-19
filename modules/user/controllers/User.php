@@ -285,8 +285,6 @@ class User extends CI_Controller
 			redirect(base_url());
 		}
 		
-		
-		
 		if(!$this->session->userdata('loggedIn')) return error(403);
 		$data['meta']			= array(
 			'title' 			=> phrase('dashboard'),
@@ -324,6 +322,7 @@ class User extends CI_Controller
 			$this->template->build('dashboard', $data);
 		}
 	}
+
 	
 	function updates()
 	{
@@ -1462,4 +1461,211 @@ class User extends CI_Controller
 		}
 		return $get_all_report;
 	}
+
+
+	function priest_new()
+	{
+		if($this->session->userdata('user_level') != 1)
+		{
+			redirect(base_url());
+		}
+		
+		if(!$this->session->userdata('loggedIn')) return error(403);
+
+		$data = array(); 
+		
+		$limit                   = isset($_POST['length']) ? $_POST['length'] : "";
+        $offset                  = isset($_POST['start']) ? $_POST['start'] : "";
+        $draw                    = isset($_POST['draw']) ? $_POST['draw'] : "";
+        $order                   = isset($_POST['order']) ? $_POST['order'] : "";
+
+		$page                    = $offset;
+
+		$param['select']         = '*';
+		$param['count']          = true;
+        $data['total_priests']     = $this->User_model->getAllPriestData($param);
+		$param['offset']        = $page;
+		unset($param['count']);
+        $length = 0;
+
+        $user_data 				= $this->User_model->getAllPriestData($param);
+        $data['priests']         = $user_data;
+
+        $data["draw"]           = (int)$draw;
+
+        $data["limit"]          = $length;
+        $data["offset"]         = $page;
+
+
+		// $data['meta']			= array(
+		// 	'title' 			=> phrase('dashboard'),
+		// 	'descriptions'		=> phrase('whatever_you_writing_for_is_a_reportations'),
+		// 	'keywords'			=> 'post, dwitri, blogs, article, social, blogging',
+		// 	'image'				=> guessImage('users'),
+		// 	'author'			=> $this->settings['siteTitle']
+		// );
+        // $data['visitors']		= $this->stats('visitors');
+        // $data['posts']			= $this->stats('posts');
+        // $data['snapshots']		= $this->stats('snapshots');
+        // $data['openletters']	= $this->stats('openletters');
+		
+		if($this->input->is_ajax_request())
+		{
+			$this->output->set_content_type('application/json');
+			$this->output->set_output(
+				json_encode(
+					array(
+						'meta'		=> $data['meta'],
+						'html'		=> $this->load->view('priest_new', $data, true)
+					)
+				)
+			);
+		}
+		else
+		{
+			$this->template->set_partial('navigation', 'dashboard_navigation');
+			
+			$this->template->set_theme('admin');
+			$this->template->set_layout('admin');
+			$this->template->build('priest_new', $data);
+		}
+	}
+
+	function parish_new()
+	{
+		if($this->session->userdata('user_level') != 1)
+		{
+			redirect(base_url());
+		}
+		
+		if(!$this->session->userdata('loggedIn')) return error(403);
+
+		$data = array(); 
+		
+		$limit                   = isset($_POST['length']) ? $_POST['length'] : "";
+        $offset                  = isset($_POST['start']) ? $_POST['start'] : "";
+        $draw                    = isset($_POST['draw']) ? $_POST['draw'] : "";
+        $order                   = isset($_POST['order']) ? $_POST['order'] : "";
+
+		$page                    = $offset;
+
+		$param['select']         = '*';
+		$param['count']          = true;
+        $data['total_parish']     = $this->User_model->getAllParishData($param);
+		$param['offset']        = $page;
+		unset($param['count']);
+        $length = 0;
+
+        $user_data 				= $this->User_model->getAllParishData($param);
+        $data['parish_data']         = $user_data;
+
+        $data["draw"]           = (int)$draw;
+
+        $data["limit"]          = $length;
+        $data["offset"]         = $page;
+
+		
+		if($this->input->is_ajax_request())
+		{
+			$this->output->set_content_type('application/json');
+			$this->output->set_output(
+				json_encode(
+					array(
+						'meta'		=> $data['meta'],
+						'html'		=> $this->load->view('parish_new', $data, true)
+					)
+				)
+			);
+		}
+		else
+		{
+			$this->template->set_partial('navigation', 'dashboard_navigation');
+			
+			$this->template->set_theme('admin');
+			$this->template->set_layout('admin');
+			$this->template->build('parish_new', $data);
+		}
+	}
+
+	function administration_new()
+	{
+		if($this->session->userdata('user_level') != 1)
+		{
+			redirect(base_url());
+		}
+		
+		if(!$this->session->userdata('loggedIn')) return error(403);
+
+		$param = array();
+		
+		$administration			= $this->User_model->getAdministrationData();
+		$data['administration'] = $administration;
+		$data['users']			= $this->User_model->getAllPriestAdministration();
+		// $data['a_type'] 		= $this->User_model->a_type;		
+		
+		if($this->input->is_ajax_request())
+		{
+			$this->output->set_content_type('application/json');
+			$this->output->set_output(
+				json_encode(
+					array(
+						'meta'		=> $data['meta'],
+						'html'		=> $this->load->view('administration_new', $data, true)
+					)
+				)
+			);
+		}
+		else
+		{
+			$this->template->set_partial('navigation', 'dashboard_navigation');
+			
+			$this->template->set_theme('admin');
+			$this->template->set_layout('admin');
+			$this->template->build('administration_new', $data);
+		}
+	}
+
+	function add_administration() {
+		$param 		= array();
+		$response 	= array();
+
+		$param['a_user_id']	= $this->input->post('a_user_id');
+		$param['a_role'] 	= $this->input->post('a_role');
+		$param['a_type'] 	= $this->input->post('a_type');
+
+		$result = $this->User_model->addAdministration($param);
+		if($result){
+			$response['error']   = false;
+            $response['status']  = 200;
+            $response['message'] = 'User Added successfully' ;  
+			echo json_encode($response);
+		}else{
+			$response['error']   = true;
+            $response['status']  = 400;
+            $response['message'] = 'Please Check the details' ;  
+			echo json_encode($response);
+		}
+	}
+
+	function delete_administration_priest() {
+		$param 		= array();
+		$response 	= array();
+
+		$id	= $this->input->post('id');
+		
+		$result = $this->User_model->deleteAdministrationPriest($id);
+		if($result){
+			$response['error']   = false;
+            $response['status']  = 200;
+            $response['message'] = 'User deleted successfully' ;  
+			echo json_encode($response);
+		}else{
+			$response['error']   = true;
+            $response['status']  = 400;
+            $response['message'] = 'Please Check the details' ;  
+			echo json_encode($response);
+		}
+	}
+
+	
 }

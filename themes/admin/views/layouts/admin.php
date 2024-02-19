@@ -17,7 +17,7 @@ Contact: contact@hencework.com
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jampack - Admin CRM Dashboard Template</title>
+    <title>Kuzhithurai Diocese</title>
     <meta name="description" content="A modern CRM Dashboard Template with reusable and flexible components for your SaaS web applications by hencework. Based on Bootstrap."/>
     
 	<!-- Favicon -->
@@ -379,8 +379,8 @@ Contact: contact@hencework.com
 				<div class="menu-content-wrap">
 					<div class="menu-group">
 						<ul class="navbar-nav flex-column">
-							<li class="nav-item active">
-								<a class="nav-link" href="index-2.html">
+							<li class="nav-item active" >
+								<a class="nav-link" href="<?php echo base_url('user/dashboard')?>">
 									<span class="nav-icon-wrap">
 										<span class="svg-icon">
 											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-template" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -393,19 +393,303 @@ Contact: contact@hencework.com
 											</svg>
 										</span>
 									</span>
-									<span class="nav-link-text">Dashboard</span>
-									<span class="badge badge-sm badge-soft-pink ms-auto">Hot</span>
+									<span class="nav-link-text">Dashboard</span>									
 								</a>
 							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="<?php echo base_url('user/administration_new')?>">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Administration</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="<?php echo base_url('user/priest_new')?>">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Priests</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="<?php echo base_url('user/parish_new')?>">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Parish</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Commissions</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Posts</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Web TV</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Gallery</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Circular</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">History</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Open News</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Manage Pages</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Post Categories</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Global Settings</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Translate</span>
+								</a>
+							</li>	
 						</ul>	
 					</div>
-					<div class="menu-gap"></div>
 					<div class="menu-group">
 						<div class="nav-header">
-							<span>Apps</span>
+							<span>Site Manage</span>
 						</div>
+					
+
 						<ul class="navbar-nav flex-column">
 							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Edit Profile</span>
+								</a>
+							</li>
+						
+							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">
+									<span class="nav-icon-wrap">
+										<span class="svg-icon">
+											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+												<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+												<line x1="15" y1="8" x2="15.01" y2="8" />
+												<rect x="4" y="4" width="16" height="16" rx="3" />
+												<path d="M4 15l4 -4a3 5 0 0 1 3 0l5 5" />
+												<path d="M14 14l1 -1a3 5 0 0 1 3 0l2 2" />
+											</svg>
+										</span>
+									</span>
+									<span class="nav-link-text">Logout</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+
+
+
+
+					<div class="menu-gap"></div>
+					<div class="menu-group">
+						<!-- <div class="nav-header">
+							<span>Apps</span>
+						</div> -->
+						<ul class="navbar-nav flex-column">
+							<!-- <li class="nav-item">
 								<a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#dash_chat">
 									<span class="nav-icon-wrap">
 										<span class="svg-icon">
@@ -435,8 +719,8 @@ Contact: contact@hencework.com
 										</ul>	
 									</li>	
 								</ul>	
-							</li>	
-							<li class="nav-item">
+							</li>	 -->
+							<!-- <li class="nav-item">
 								<a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#dash_chatpop">
 									<span class="nav-icon-wrap">
 										<span class="svg-icon">
@@ -464,8 +748,8 @@ Contact: contact@hencework.com
 										</ul>	
 									</li>	
 								</ul>	
-							</li>	
-							<li class="nav-item">
+							</li>	 -->
+							<!-- <li class="nav-item">
 								<a class="nav-link" href="calendar.html">
 									<span class="nav-icon-wrap">
 										<span class="svg-icon">
@@ -496,8 +780,8 @@ Contact: contact@hencework.com
 									</span>
 									<span class="nav-link-text">Email</span>
 								</a>
-							</li>
-							<li class="nav-item">
+							</li> -->
+							<!-- <li class="nav-item">
 								<a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#dash_scrumboard">
 									<span class="nav-icon-wrap position-relative">
 										<span class="badge badge-sm badge-primary badge-sm badge-pill position-top-end-overflow">3</span>
@@ -529,8 +813,8 @@ Contact: contact@hencework.com
 										</ul>	
 									</li>	
 								</ul>	
-							</li>
-							<li class="nav-item">
+							</li> -->
+							<!-- <li class="nav-item">
 								<a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#dash_contact">
 									<span class="nav-icon-wrap">
 										<span class="svg-icon">
@@ -559,8 +843,8 @@ Contact: contact@hencework.com
 										</ul>	
 									</li>	
 								</ul>	
-							</li>
-							<li class="nav-item">
+							</li> -->
+							<!-- <li class="nav-item">
 								<a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#dash_file">
 									<span class="nav-icon-wrap">
 										<span class="svg-icon">
@@ -586,8 +870,8 @@ Contact: contact@hencework.com
 										</ul>	
 									</li>	
 								</ul>	
-							</li>
-							<li class="nav-item">
+							</li> -->
+							<!-- <li class="nav-item">
 								<a class="nav-link" href="gallery.html">
 									<span class="nav-icon-wrap">
 										<span class="svg-icon">
@@ -602,8 +886,8 @@ Contact: contact@hencework.com
 									</span>
 									<span class="nav-link-text">Gallery</span>
 								</a>
-							</li>
-							<li class="nav-item">
+							</li> -->
+							<!-- <li class="nav-item">
 								<a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#dash_task">
 									<span class="nav-icon-wrap">
 										<span class="svg-icon">
@@ -633,8 +917,8 @@ Contact: contact@hencework.com
 										</ul>	
 									</li>	
 								</ul>	
-							</li>
-							<li class="nav-item">
+							</li> -->
+							<!-- <li class="nav-item">
 								<a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#dash_blog">
 									<span class="nav-icon-wrap">
 										<span class="svg-icon">
@@ -663,8 +947,8 @@ Contact: contact@hencework.com
 										</ul>	
 									</li>	
 								</ul>	
-							</li>
-							<li class="nav-item">
+							</li> -->
+							<!-- <li class="nav-item">
 								<a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#dash_invoice">
 									<span class="nav-icon-wrap">
 										<span class="svg-icon">
@@ -697,8 +981,8 @@ Contact: contact@hencework.com
 										</ul>	
 									</li>	
 								</ul>	
-							</li>
-							<li class="nav-item">
+							</li> -->
+							<!-- <li class="nav-item">
 								<a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#dash_integ">
 									<span class="nav-icon-wrap">
 										<span class="svg-icon">
@@ -727,15 +1011,15 @@ Contact: contact@hencework.com
 										</ul>	
 									</li>	
 								</ul>	
-							</li>
+							</li> -->
 						</ul>
 					</div>
 					<div class="menu-gap"></div>
 					<div class="menu-group">
-						<div class="nav-header">
+						<!-- <div class="nav-header">
 							<span>Pages</span>
-						</div>
-						<ul class="navbar-nav flex-column">
+						</div> -->
+						<!-- <ul class="navbar-nav flex-column">
 							<li class="nav-item">
 								<a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#dash_pages">
 									<span class="nav-icon-wrap">
@@ -849,10 +1133,10 @@ Contact: contact@hencework.com
 									</li>
 								</ul>
 							</li>
-						</ul>
+						</ul> -->
 					</div>
 					<div class="menu-gap"></div>
-					<div class="menu-group">
+					<!-- <div class="menu-group">
 						<div class="nav-header">
 							<span>Documentation</span>
 						</div>
@@ -889,14 +1173,14 @@ Contact: contact@hencework.com
 								</a>
 							</li>
 						</ul>
-					</div>
-					<div class="callout card card-flush bg-orange-light-5 text-center mt-5 w-220p mx-auto">
+					</div> -->
+					<!-- <div class="callout card card-flush bg-orange-light-5 text-center mt-5 w-220p mx-auto">
 						<div class="card-body">
 							<h5 class="h5">Quickly Build Applications</h5>
 							<p class="p-sm card-text">Exclusively for webapps Based on Bootstrap</p>
 							<a href="https://nubra-ui.hencework.com/" target="_blank" class="btn btn-primary btn-block">Go Nubra-UI</a>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<!-- /Main Menu -->
@@ -1064,12 +1348,12 @@ Contact: contact@hencework.com
 				<div class="footer-copy-text">Powered by <a class="brand-link" href="#"><img src="/themes/admin/dist/img/logo-light.png" alt="logo-brand"></a></div>
 			</footer>
 		</div>
-		<a href="#" class="btn btn-icon btn-floating btn-primary btn-lg btn-rounded btn-popup-open">
+		<!-- <a href="#" class="btn btn-icon btn-floating btn-primary btn-lg btn-rounded btn-popup-open">
 			<span class="icon">
 				<span class="feather-icon"><i data-feather="message-circle"></i></span>
 			</span>
 		</a>
-		<div class="chat-popover shadow-xl"><p>Try Jampack Chat for free and connect with your customers now!</p></div>
+		<div class="chat-popover shadow-xl"><p>Try Jampack Chat for free and connect with your customers now!</p></div> -->
 		<!-- /Chat Popup -->
 
 		<!-- Main Content -->
@@ -1083,11 +1367,11 @@ Contact: contact@hencework.com
 				<footer class="container-xxl footer">
 					<div class="row">
 						<div class="col-xl-8">
-							<p class="footer-text"><span class="copy-text">Jampack © 2023 All rights reserved.</span> <a href="#" class="" target="_blank">Privacy Policy</a><span class="footer-link-sep">|</span><a href="#" class="" target="_blank">T&C</a><span class="footer-link-sep">|</span><a href="#" class="" target="_blank">System Status</a></p>
+							<p class="footer-text"><span class="copy-text">Kuzhithurai Diocese © 2024 All rights reserved.</span></p>
 						</div>
-						<div class="col-xl-4">
+						<!-- <div class="col-xl-4">
 							<a href="#" class="footer-extr-link link-default"><span class="feather-icon"><i data-feather="external-link"></i></span><u>Send feedback to our help forum</u></a>
-						</div>
+						</div> -->
 					</div>
 				</footer>
             </div>
