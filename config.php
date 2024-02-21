@@ -3,5 +3,5 @@
 	define('HOSTNAME', 'localhost');
 	define('USERNAME', 'root');
 	define('PASSWORD', 'root');
-	define('DATABASE', 'dioss');
+	define('DATABASE', 'dio');
 	
