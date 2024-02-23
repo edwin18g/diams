@@ -274,8 +274,12 @@ class User extends CI_Controller
 			else
 			{
 
-				$this->template->build('home', $data);
+				// $this->template->build('home', $data);
+				// $this->pageName = 'home';
+				$this->load->view('frontend_layout', $data);
 			}
+
+	
 	}
 	
 	function dashboard()
