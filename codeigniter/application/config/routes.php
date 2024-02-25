@@ -1,6 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+$route['login'] 								= 'user/login';
+$route['admin'] 								= 'user/dashboard';
+$route['admin/posts'] 							= 'user/posts';
+$route['admin/gallery'] 						= 'user/snapshots';
+$route['admin/priests'] 						= 'user/priest_new';
+
+
+
+
+
+
+
 $route['search']									= 'search';
 $route['priest']					    			= 'priests';
 $route['parish']					    			= 'parish';
@@ -27,3 +39,4 @@ $route['(:any)/friends']							= 'user';
 $route['default_controller'] 					    = 'user';
 $route['404_override'] 								= 'error';
 $route['translate_uri_dashes'] 				        = FALSE;
+

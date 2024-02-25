@@ -40,7 +40,7 @@ class Administration extends CI_Controller
 	
 	function index($slug = null, $limit = 10, $offset = 0)
 	{
-		
+		// die('dd');
 		
 		if($this->input->post('hash'))
 		{
@@ -113,7 +113,9 @@ class Administration extends CI_Controller
 			}
 			else
 			{
-				$this->template->build('Administration', $data);
+				// $this->template->build('Administration', $data);
+				$data['pageName'] = 'Administration';
+				$this->load->view('user/frontend_layout', $data);
 			}
 		}
 	}

@@ -240,6 +240,7 @@ class User extends CI_Controller
 		
 			 
   $data['home_slider']													= $this->User_model->get_home_sliders();
+
 	$data['cachereset'] 													= 1;
 	$data_pass   																	= array();
 	$data_pass['limit']														= 4;
@@ -1034,15 +1035,7 @@ class User extends CI_Controller
 			
 			$this->form_validation->set_rules('username', phrase('username_or_email'),'required');
 			$this->form_validation->set_rules('password', phrase('password'),'required');
-			//$this->form_validation->set_rules('hash', phrase('hash'),'trim|required');
-			
-			// if($this->form_validation->run() == FALSE)
-			// {
-			// 	die('valideate irre');
-			// 	echo json_encode(array('status' => 204, 'messages' => array(validation_errors('<span><i class="fa fa-ban"></i> &nbsp; ', '</span><br />'))));
-			// }
-			// else
-			// {
+		
 				$username		= $this->input->post('username');
 				$password		= sha1($this->input->post('password') . SALT);
 				
@@ -1051,8 +1044,7 @@ class User extends CI_Controller
 				{
 					
 					$this->session->set_flashdata('success', phrase('welcome_back') . ', ' . $this->session->userdata('full_name'));
-					redirect((isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : $_SERVER['SERVER_NAME']));
-					//echo json_encode(array("status" => 200, "redirect" => (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : $_SERVER['SERVER_NAME'])));
+					redirect(base_url('admin'));
 					
 				}
 				else
@@ -1060,7 +1052,7 @@ class User extends CI_Controller
 					
 					echo json_encode(array('status' => 406, 'messages' => phrase('username_or_password_did_not_match')));
 				}
-		//	}
+	
 		}
 		else
 		{
@@ -1095,8 +1087,10 @@ class User extends CI_Controller
 			}
 			else
 			{
-				$data['hideTopBottam']  = 'yes';
-				$this->template->build('login', $data);
+				// $data['hideTopBottam']  = 'yes';
+				// $this->template->build('login', $data);
+
+				$this->load->view('login_layout',$data);
 			}
 		}
 	}
