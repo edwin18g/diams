@@ -3,663 +3,305 @@ if(empty($pageName)){
   die('page name missing');
 }
 ?>
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-
-<!-- Mirrored from slidesigma.com/themes/html/martalaa/home-v2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Feb 2024 04:23:03 GMT -->
+<html lang="en">
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Martaala - Church HTML Template</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
-
-  <!-- partial:partial/__stylesheets.html -->
-  <link rel="stylesheet" href="/themes/frontend/assets/css/plugins/bootstrap.min.css">
-  <link rel="stylesheet" href="/themes/frontend/assets/css/plugins/animate.min.css">
-  <link rel="stylesheet" href="/themes/frontend/assets/css/plugins/magnific-popup.css">
-  <link rel="stylesheet" href="/themes/frontend/assets/css/plugins/slick.css">
-  <link rel="stylesheet" href="/themes/frontend/assets/css/plugins/slick-theme.css">
-  <link rel="stylesheet" href="/themes/frontend/assets/css/plugins/ion.rangeSlider.min.css">
-
-  <!-- Icon Fonts -->
-  <link rel="stylesheet" href="/themes/frontend/assets/fonts/flaticon/flaticon.css">
-  <link rel="stylesheet" href="/themes/frontend/assets/css/plugins/font-awesome.min.css">
-  <!-- Template Style sheet -->
-  <link rel="stylesheet" href="/themes/frontend/assets/css/style.css">
-  <link rel="stylesheet" href="/themes/frontend/assets/css/responsive.css">
-  <!-- partial -->
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadaka - Non Profit Charity HTML Template</title>
+    <!-- Favicon img -->
+    <link rel="shortcut icon" href="/themes/frontend/assets/images/favicon.png">
+    <!-- Bootstarp min css -->
+    <link rel="stylesheet" href="/themes/frontend/assets/css/bootstrap.min.css">
+    <!-- Mean menu css -->
+    <link rel="stylesheet" href="/themes/frontend/assets/css/meanmenu.css">
+    <!-- All min css -->
+    <link rel="stylesheet" href="/themes/frontend/assets/css/all.min.css">
+    <!-- Swiper bundle min css -->
+    <link rel="stylesheet" href="/themes/frontend/assets/css/swiper-bundle.min.css">
+    <!-- Magnigic popup css -->
+    <link rel="stylesheet" href="/themes/frontend/assets/css/magnific-popup.css">
+    <!-- Animate css -->
+    <link rel="stylesheet" href="/themes/frontend/assets/css/animate.css">
+    <!-- Nice select css -->
+    <link rel="stylesheet" href="/themes/frontend/assets/css/nice-select.css">
+    <!-- Style css -->
+    <link rel="stylesheet" href="/themes/frontend/assets/css/style.css">
 </head>
 
 <body>
 
-  <!-- Preloader Start -->
-  <div class="sigma_preloader">
-    <img src="/themes/frontend/assets/img/christian.svg" alt="preloader">
-  </div>
-  <!-- Preloader End -->
-
-  <!-- Search Start -->
-  <div class="sigma_search-form-wrapper">
-    <div class="sigma_search-trigger close-btn">
-      <span></span>
-      <span></span>
-    </div>
-    <form class="sigma_search-form" method="post">
-      <input type="text" placeholder="Search..." value="">
-      <button type="submit" class="sigma_search-btn">
-        <i class="fal fa-search"></i>
-      </button>
-    </form>
-  </div>
-  <!-- Search End -->
-
-  <!-- partial:partial/__quickview.html -->
-  <div class="modal fade sigma_quick-view-modal" id="quickViewModal" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-
-          <div class="close-btn close-dark close" data-bs-dismiss="modal">
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="row">
-            <div class="col-md-6">
-              <div class="sigma_product-single-thumb">
-                <img src="/themes/frontend/assets/img/products/new/1.jpg" alt="product">
-              </div>
+    <!-- Preloader area start -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="loading-icon text-center d-flex flex-column align-items-center justify-content-center">
+                    <img class="loading-logo" src="<?php echo base_url('themes/default/images/logo.png?1234'); ?>" alt="icon">
+                </div>
             </div>
-            <div class="col-md-6">
+        </div>
+    </div>
+    <!-- Preloader area end -->
 
-              <div class="sigma_product-single-content">
+   
+    <!-- Header area start here -->
+    <header class="header-area">
+        <div class="container">
+            <div class="header__main">
+                <a href="index.html" class="logo">
+                    <img src="<?php echo base_url('themes/default/images/logo.png?1234'); ?>" alt="logo">
+                </a>
+                <div class="main-menu">
+                    <nav>
+                        <ul>
+                            <li class="has-megamenu">
+                                <a href="<?php echo base_url()?>">Home</a>
+                                
+                            </li>
+                            <li><a href="<?php echo base_url('administration')?>">Administration</a></li>
 
-                <h4 class="entry-title"> Koobay 14" Wooden Trousers Bottom Clips Hangers w Rose Gold. </h4>
-
-                <div class="sigma_product-price">
-                  <span>352$</span>
-                  <span>245$</span>
+                            <li>
+                                <a href="<?php echo base_url('priest')?>">Priests</a>
+                                
+                            </li>
+                            <li>
+                            <a href="<?php echo base_url('parish')?>">Parish</a>
+                               
+                            </li>
+                            
+                            <li>
+                            <a href="<?php echo base_url('commission')?>">Commission</a>
+                                
+                            </li>
+                            <li>
+                            
+                                <a href="#0">More <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-360 280-560h400L480-360Z"/></svg></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="<?php echo base_url('posts')?>">posts</a>
+                                    </li>
+                                    <li>
+                                    <a href="<?php echo base_url('snapshots')?>">Gallery</a>
+                                    </li>
+                                    <li>
+                                    <a href="<?php echo base_url('pages/history')?>">History</a>
+                                        
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                            <a href="<?php echo base_url('pages/contact')?>">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-
-                <div class="sigma_rating-wrapper">
-                  <div class="sigma_rating">
-                    <i class="far fa-star active"></i>
-                    <i class="far fa-star active"></i>
-                    <i class="far fa-star active"></i>
-                    <i class="far fa-star active"></i>
-                    <i class="far fa-star"></i>
-                  </div>
-                  <span>255 Reviews</span>
+                <!-- <div class="btn-two d-none d-lg-inline-block">
+                    <span class=" btn-circle">
+                    </span>
+                    <a href="cause-single.html" class="btn-inner">
+                        <span class="btn-text">
+                            DONATE NOW
+                        </span>
+                    </a>
+                </div> -->
+                <div class="bars d-block d-lg-none">
+                    <i id="openButton" class="fa-solid fa-bars"></i>
                 </div>
-
-                <p> <strong class="me-2">Interested: <span>05</span></strong> <strong>Availablity: <span>In Stock</span></strong> </p>
-
-                <p class="sigma_product-excerpt">Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
-
-                <form class="sigma_product-atc-form">
-
-                  <div class="sigma_product-variation-wrapper">
-                    <div class="sigma_product-radio form-group">
-                      <label>
-                        <input type="radio" name="size" value="" checked>
-                        <span>XS</span>
-                      </label>
-                      <label>
-                        <input type="radio" name="size" value="">
-                        <span>S</span>
-                      </label>
-                      <label>
-                        <input type="radio" name="size" value="">
-                        <span>M</span>
-                      </label>
-                      <label>
-                        <input type="radio" name="size" value="">
-                        <span>L</span>
-                      </label>
-                      <label>
-                        <input type="radio" name="size" value="">
-                        <span>XL</span>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div class="qty-outter">
-                    <a href="product-single.html" class="sigma_btn-custom secondary">Buy Now</a>
-                    <div class="qty-inner">
-                      <h6>Qty:</h6>
-                      <div class="qty">
-                        <span class="qty-subtract"><i class="fa fa-minus"></i></span>
-                        <input type="text" name="qty" value="1">
-                        <span class="qty-add"><i class="fa fa-plus"></i></span>
-                      </div>
-                    </div>
-                  </div>
-
-                </form>
-
-                <!-- Post Meta Start -->
-                <div class="sigma_post-single-meta">
-                  <div class="sigma_post-single-meta-item sigma_post-share">
-                    <h6>Share</h6>
-                    <ul class="sigma_sm">
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fab fa-youtube"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="sigma_post-single-meta-item">
-                    <div class="sigma_product-controls">
-                      <a href="#" data-toggle="tooltip" title="Compare"> <i class="far fa-signal-4"></i> </a>
-                      <a href="#" data-toggle="tooltip" title="Wishlist"> <i class="far fa-heart"></i> </a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Post Meta End -->
-
-              </div>
-
             </div>
-          </div>
-
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- partial -->
+    </header>
+    <!-- Header area end here -->
 
-  <!-- partial:partia/__sidenav.html -->
-  <aside class="sigma_aside sigma_aside-right sigma_aside-right-panel sigma_aside-bg">
-    <div class="sidebar">
-
-      <div class="sidebar-widget widget-logo">
-        <img src="/themes/frontend/assets/img/logo.png" class="mb-30" alt="img">
-        <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-      </div>
-
-      <!-- Instagram Start -->
-      <div class="sidebar-widget widget-ig">
-        <h5 class="widget-title">Instagram</h5>
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-            <a href="#" class="sigma_ig-item">
-              <img src="/themes/frontend/assets/img/ig/1.jpg" alt="ig">
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-            <a href="#" class="sigma_ig-item">
-              <img src="/themes/frontend/assets/img/ig/2.jpg" alt="ig">
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-            <a href="#" class="sigma_ig-item">
-              <img src="/themes/frontend/assets/img/ig/3.jpg" alt="ig">
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-            <a href="#" class="sigma_ig-item">
-              <img src="/themes/frontend/assets/img/ig/4.jpg" alt="ig">
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-            <a href="#" class="sigma_ig-item">
-              <img src="/themes/frontend/assets/img/ig/5.jpg" alt="ig">
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-6">
-            <a href="#" class="sigma_ig-item">
-              <img src="/themes/frontend/assets/img/ig/6.jpg" alt="ig">
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Instagram End -->
-
-      <!-- Social Media Start -->
-      <div class="sidebar-widget">
-        <h5 class="widget-title">Follow Us</h5>
-        <div class="sigma_post-share">
-          <ul class="sigma_sm square light">
-            <li>
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
+    <!-- Sidebar area start here -->
+    <div id="targetElement" class="sidebar-area sidebar__hide">
+        <div class="sidebar__overlay"></div>
+        <a href="index.html" class="logo mb-40">
+            <img src="<?php echo base_url('themes/default/images/logo.png?1234'); ?>" alt="logo">
+        </a>
+        <div class="mobile-menu overflow-hidden"></div>
+        <ul class="info pt-40">
+            <li><i class="fa-solid primary-color fa-location-dot"></i> <a href="#0">example@example.com</a>
             </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
+            <li class="py-2"><i class="fa-solid primary-color fa-phone-volume"></i> <a
+                    href="tel:+208-6666-0112">+208-6666-0112</a>
             </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-youtube"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- Social Media End -->
-
-    </div>
-  </aside>
-  <div class="sigma_aside-overlay aside-trigger-right"></div>
-  <!-- partial -->
-
-  <!-- partial:partia/__mobile-nav.html -->
-  <aside class="sigma_aside sigma_aside-left">
-
-    <a class="navbar-brand" href="index.html"> <img src="/themes/frontend/assets/img/logo.png" alt="logo"> </a>
-
-    <!-- Menu -->
-    <ul>
-          <li class="menu-item menu-item-has-children">
-            <a href="#">Home</a>
-            <ul class="sub-menu">
-              <li class="menu-item"> <a href="index.html">Home v1</a> </li>
-              <li class="menu-item"> <a href="home-v2.html">Home v2</a> </li>
-              <li class="menu-item"> <a href="home-v3.html">Home v3</a> </li>
-            </ul>
-          </li>
-          <li class="menu-item menu-item-has-children">
-            <a href="#">Blog</a>
-            <ul class="sub-menu">
-              <li class="menu-item">
-                <a href="blog-grid.html">Blog Archive</a>
-              </li>
-              <li class="menu-item"> <a href="blog-details.html">Blog Details</a> </li>
-            </ul>
-          </li>
-          <li class="menu-item menu-item-has-children">
-            <a href="#">Pages</a>
-            <ul class="sub-menu">
-              <li class="menu-item"> <a href="about-us.html">About Us</a> </li>
-              <li class="menu-item"> <a href="broadcast.html">Broadcast</a> </li>
-              <li class="menu-item menu-item-has-children"> 
-                <a href="#">Volunteers</a>
-                <ul class="sub-menu">
-                  <li class="menu-item">
-                    <a href="volunteers.html">Volunteers</a>
-                  </li>
-                  <li class="menu-item"> <a href="volunteer-detail.html">Volunteer Details</a> </li>
-                </ul> 
-              </li>
-              <li class="menu-item"> <a href="faq.html">FAQ</a> </li>
-            </ul>
-          </li>
-          <li class="menu-item menu-item-has-children">
-            <a href="#">Service</a>
-            <ul class="sub-menu">
-             <li class="menu-item"> <a href="services.html">Service Style 1</a> </li>
-             <li class="menu-item"> <a href="services-2.html">Service Style 2</a> </li>
-           </ul>
-         </li>
-         <li class="menu-item menu-item-has-children">
-            <a href="#">Donation</a>
-            <ul class="sub-menu">
-              <li class="menu-item"> <a href="donation.html">Donation</a> </li>
-              <li class="menu-item"> <a href="donation-archive.html">Donation Archive</a> </li>
-            </ul>
-          </li>
-          <li class="menu-item menu-item-has-children">
-            <a href="#">Events</a>
-            <ul class="sub-menu">
-             <li class="menu-item"> <a href="events.html">Events</a> </li>
-             <li class="menu-item"> <a href="event-details.html">Event Detail</a> </li>
-           </ul>
-         </li>
-         <li class="menu-item menu-item-has-children">
-          <a href="#">Sermons</a>
-          <ul class="sub-menu">
-           <li class="menu-item"> <a href="sermons.html">Sermon</a> </li>
-           <li class="menu-item"> <a href="sermon-details.html">Sermon Details</a> </li>
-         </ul>
-       </li>
-       <li class="menu-item menu-item-has-children">
-        <a href="#">Ministries</a>
-        <ul class="sub-menu">
-         <li class="menu-item"> <a href="ministries.html">Ministries</a> </li>
-         <li class="menu-item"> <a href="ministry-details.html">Ministry Details</a> </li>
-       </ul>
-     </li>
-     <li class="menu-item menu-item-has-children">
-      <a href="#">Shop</a>
-      <ul class="sub-menu">
-        <li class="menu-item"> <a href="shop.html">Shop</a> </li>
-        <li class="menu-item"> <a href="product-single.html">Product Details</a> </li>
-        <li class="menu-item"> <a href="cart.html">Cart</a> </li>
-        <li class="menu-item"> <a href="checkout.html">Checkout</a> </li>
-        <li class="menu-item"> <a href="wishlist.html">Wishlist</a> </li>
-      </ul>
-    </li>
-    <li class="menu-item">
-      <a href="contact-us.html">Contact</a>
-    </li>
-    </ul>
-
-  </aside>
-  <div class="sigma_aside-overlay aside-trigger-left"></div>
-  <!-- partial -->
-
-  <!-- partial:partia/__header.html -->
-  <header class="sigma_header header-2 can-sticky">
-
-    <!-- Middle Header Start -->
-    <div class="sigma_header-middle">
-      <nav class="navbar">
-
-        <!-- Controls -->
-        <div class="sigma_header-controls style-2">
-
-          <ul class="sigma_header-controls-inner">
-            <!-- Desktop Toggler -->
-            <li class="aside-toggler style-2 aside-trigger-right desktop-toggler">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </li>
-
-            <!-- Mobile Toggler -->
-            <li class="aside-toggler style-2 aside-trigger-left">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </li>
-          </ul>
-
-        </div>
-
-        <!-- Menu -->
-        <ul class="navbar-nav">
-          <li class="menu-item menu-item-has-children">
-            <a href="#">Home</a>
-            <ul class="sub-menu">
-              <li class="menu-item"> <a href="index.html">Home v1</a> </li>
-              <li class="menu-item"> <a href="home-v2.html">Home v2</a> </li>
-              <li class="menu-item"> <a href="home-v3.html">Home v3</a> </li>
-            </ul>
-          </li>
-          <li class="menu-item menu-item-has-children">
-            <a href="#">Pages</a>
-            <ul class="sub-menu">
-              <li class="menu-item"> <a href="about-us.html">About Us</a> </li>
-              <li class="menu-item menu-item-has-children">
-                <a href="#">Blog</a>
-                <ul class="sub-menu">
-                  <li class="menu-item">
-                    <a href="blog-grid.html">Blog Archive</a>
-                  </li>
-                  <li class="menu-item"> <a href="blog-details.html">Blog Details</a> </li>
-                </ul>
-              </li>
-              <li class="menu-item menu-item-has-children">
-                <a href="#">Shop</a>
-                <ul class="sub-menu">
-                  <li class="menu-item"> <a href="shop.html">Shop</a> </li>
-                  <li class="menu-item"> <a href="product-single.html">Product Details</a> </li>
-                  <li class="menu-item"> <a href="cart.html">Cart</a> </li>
-                  <li class="menu-item"> <a href="checkout.html">Checkout</a> </li>
-                  <li class="menu-item"> <a href="wishlist.html">Wishlist</a> </li>
-                </ul>
-              </li>
-              <li class="menu-item menu-item-has-children">
-                <a href="#">Service</a>
-                <ul class="sub-menu">
-                 <li class="menu-item"> <a href="services.html">Service Style 1</a> </li>
-                 <li class="menu-item"> <a href="services-2.html">Service Style 2</a> </li>
-                </ul>
-              </li>
-              <li class="menu-item"> <a href="broadcast.html">Broadcast</a> </li>
-              <li class="menu-item"> <a href="contact-us.html">Contact Us</a> </li>
-              <li class="menu-item menu-item-has-children"> 
-                <a href="#">Volunteers</a>
-                <ul class="sub-menu">
-                  <li class="menu-item">
-                    <a href="volunteers.html">Volunteers</a>
-                  </li>
-                  <li class="menu-item"> <a href="volunteer-detail.html">Volunteer Details</a> </li>
-                </ul> 
-              </li>
-              <li class="menu-item"> <a href="faq.html">FAQ</a> </li>
-            </ul>
-          </li>
-          <li class="menu-item menu-item-has-children">
-                <a href="#">Events</a>
-                <ul class="sub-menu">
-                   <li class="menu-item"> <a href="events.html">Events</a> </li>
-                   <li class="menu-item"> <a href="event-details.html">Event Detail</a> </li>
-                </ul>
-          </li>
-          <li class="menu-item menu-item-has-children">
-                <a href="#">Sermons</a>
-                <ul class="sub-menu">
-                 <li class="menu-item"> <a href="sermons.html">Sermon</a> </li>
-                 <li class="menu-item"> <a href="sermon-details.html">Sermon Details</a> </li>
-               </ul>
-             </li>
-          <li class="menu-item menu-item-has-children">
-                <a href="#">Ministries</a>
-                <ul class="sub-menu">
-                 <li class="menu-item"> <a href="ministries.html">Ministries</a> </li>
-                  <li class="menu-item"> <a href="ministry-details.html">Ministry Details</a> </li>
-                </ul>
-          </li>
-          <li class="menu-item menu-item-has-children">
-                <a href="#">Donation</a>
-                <ul class="sub-menu">
-                  <li class="menu-item"> <a href="donation.html">Donation</a> </li>
-                  <li class="menu-item"> <a href="donation-archive.html">Donation Archive</a> </li>
-                </ul>
-              </li>
+            <li><i class="fa-solid primary-color fa-paper-plane"></i> <a href="#0">info@example.com</a></li>
         </ul>
-
-        <!-- Logo Start -->
-        <div class="sigma_logo-wrapper">
-          <a class="navbar-brand" href="index.html">
-            <img src="/themes/frontend/assets/img/logo.png" alt="logo">
-          </a>
+        <div class="social-icon mt-20">
+            <a href="#0"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#0"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#0"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#0"><i class="fa-brands fa-pinterest-p"></i></a>
         </div>
-        <!-- Logo End -->
-
-        <!-- Button & Phone -->
-        <div class="sigma_header-controls sigma_header-button">
-          <a href="tel:+123456789" class="sigma_header-contact">
-            <i class="flaticon-telephone"></i>
-            <div class="sigma_header-contact-inner">
-              <span>Get Support</span>
-              <h6>987-879-428-48</h6>
-            </div>
-          </a>
-          <a class="sigma_btn-custom" href="donation.html"> Donate Now </a>
-        </div>
-
-        <!-- Controls -->
-        <div class="sigma_header-controls style-1">
-
-          <a href="#" class="sigma_search-trigger"> <i class="flaticon-magnifying-glass"></i> </a>
-
-        </div>
-
-      </nav>
+        <button id="closeButton" class="text-white"><i class="fa-solid fa-xmark"></i></button>
     </div>
-    <!-- Middle Header End -->
+    <!-- Sidebar area end here -->
 
-  </header>
-  <!-- partial -->
-<?php if(!empty($pageName)){
+    <main>
+    <?php if(!empty($pageName)){
    $this->load->view($pageName);
   }else{
 
     echo "page missing";
-  }?>
-  <!-- partial:partia/__footer.html -->
-  <footer class="sigma_footer footer-2">
+  }?> 
+    </main>
 
-    <!-- Middle Footer -->
-    <div class="sigma_footer-middle">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 footer-widget">
-            <h5 class="widget-title">About Us</h5>
-            <p class="mb-4">Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in</p>
-            <div class="d-flex align-items-center justify-content-md-start justify-content-center">
-              <i class="far fa-phone custom-primary me-3"></i>
-              <span>987-987-930-302</span>
+    <!-- Footer area start here -->
+    <footer class="footer-area secondary-bg overflow-hidden">
+        <div class="footer__main-wrp">
+            <div class="footer__shape-left wow slideInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <img class="footer__shape__animation" src="/themes/frontend/assets/images/shape/footer-shape-left.png" alt="shape">
             </div>
-            <div class="d-flex align-items-center justify-content-md-start justify-content-center mt-2">
-              <i class="far fa-envelope custom-primary me-3"></i>
-              <span>info@example.com</span>
+            <div class="footer__shape-right wow slideInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
+                <img class="footer__shape__animation-right" src="/themes/frontend/assets/images/shape/footer-shape-right.png"
+                    alt="shape">
             </div>
-            <div class="d-flex align-items-center justify-content-md-start justify-content-center mt-2">
-              <i class="far fa-map-marker custom-primary me-3"></i>
-              <span>14/A, Poor Street City Tower, New York USA</span>
+            <div class="container">
+                <div class="footer__wrp pt-120 pb-120">
+                    <div class="row g-4 justify-content-between">
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="footer__item">
+                                <a href="index.html" class="logo mb-40">
+                                    <img src="<?php echo base_url('themes/default/images/logo.png?1234'); ?>" alt="image">
+                                </a>
+                                <p class="text-white">Phasellus ultricies aliquam volutpat
+                                    ullamcorper laoreet neque, a lacinia
+                                    curabitur lacinia mollis</p>
+                                <div class="btn-one mt-40">
+                                    <span class="btn-circle">
+                                    </span>
+                                    <a href="cause-single.html" class="btn-inner">
+                                        <span class="btn-text">
+                                            DONATE NOW
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                            <div class="footer__item">
+                                <h3 class="title mb-40 text-white">Quick Links</h3>
+                                <ul class="link">
+                                    <li class="mb-3">
+                                        <a href="<?php echo base_url('administration')?>"><i class="fa-light fa-angles-right me-2"></i> Administration</a>
+                                    </li>
+                                    <li class="mb-3">
+                                        <a href="cause.html"><i class="fa-light fa-angles-right me-2"></i> Our
+                                            Causes</a>
+                                    </li>
+                                    <li class="mb-3">
+                                        <a href="event.html"><i class="fa-light fa-angles-right me-2"></i> Upcoming
+                                            Event</a>
+                                    </li>
+                                    <li class="mb-3">
+                                        <a href="blog.html"><i class="fa-light fa-angles-right me-2"></i> Latest
+                                            Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"><i class="fa-light fa-angles-right me-2"></i> Contact
+                                            Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                            <div class="footer__item">
+                                <h3 class="title mb-40 text-white">Latest Post</h3>
+                                <ul class="post">
+                                    <li class="mb-3">
+                                        <div class="image">
+                                            <img src="/themes/frontend/assets/images/footer/footer-blog1.png" alt="image">
+                                        </div>
+                                        <div class="con"><span>22, Nov 2023</span>
+                                            <a href="blog-single.html">
+                                                Provide Healthy Impoverished..
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="image">
+                                            <img src="/themes/frontend/assets/images/footer/footer-blog2.png" alt="image">
+                                        </div>
+                                        <div class="con"><span>18, Nov 2023</span>
+                                            <a href="blog-single.html">
+                                                Rebecca’s New <br>
+                                                Album..
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div class="footer__item">
+                                <h3 class="title mb-40 text-white">Contact Info</h3>
+                                <ul class="link info">
+                                    <li class="mb-3">
+                                        <a href="tel:+8555-2546-2566"><i
+                                                class="fa-solid fa-phone me-1 primary-color"></i>
+                                            +8
+                                            555-2546-2566</a>
+                                    </li>
+                                    <li class="mb-3">
+                                        <a href="#0"><i class="fa-sharp fa-solid fa-envelope me-1 primary-color"></i>
+                                            info@example.com</a>
+                                    </li>
+                                    <li>
+                                        <a href="#0"><i class="fa-solid fa-location-dot me-1 primary-color"></i> 3891
+                                            Ranchview California
+                                            62639</a>
+                                    </li>
+                                </ul>
+                                <div class="social-icon mt-30">
+                                    <a href="#0"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a class="active" href="#0"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#0"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="#0"><i class="fa-brands fa-pinterest-p"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 footer-widget">
-            <h5 class="widget-title">Information</h5>
-            <ul>
-              <li> <a href="ministries.html">Ministries</a> </li>
-              <li> <a href="services.html">Services</a> </li>
-              <li> <a href="about-us.html">Our Church</a> </li>
-              <li> <a href="sermons.html">Sermons</a> </li>
-              <li> <a href="volunteers.html">Volunteers</a> </li>
-              <li> <a href="events.html">Events</a> </li>
-            </ul>
-          </div>
-          <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 footer-widget">
-            <h5 class="widget-title">Others</h5>
-            <ul>
-              <li> <a href="shop.html">Shop</a> </li>
-              <li> <a href="checkout.html">Checkout</a> </li>
-              <li> <a href="donation-archive.html">Donation</a> </li>
-              <li> <a href="contact-us.html">Contact Us</a> </li>
-              <li> <a href="blog-grid.html">Blog</a> </li>
-            </ul>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12 d-none d-lg-block footer-widget widget-recent-posts">
-            <h5 class="widget-title">Recent Posts</h5>
-            <article class="sigma_recent-post">
-              <a href="blog-details.html"><img src="/themes/frontend/assets/img/blog/sm/1.jpg" alt="post"></a>
-              <div class="sigma_recent-post-body">
-                <a href="blog-details.html"> <i class="far fa-calendar"></i> May 20, 2024</a>
-                <h6> <a href="blog-details.html">Church companies are being so transparent with their work</a> </h6>
-              </div>
-            </article>
-            <article class="sigma_recent-post">
-              <a href="blog-details.html"><img src="/themes/frontend/assets/img/blog/sm/2.jpg" alt="post"></a>
-              <div class="sigma_recent-post-body">
-                <a href="blog-details.html"> <i class="far fa-calendar"></i> May 20, 2024</a>
-                <h6> <a href="blog-details.html">Testimony love offering so blessed</a> </h6>
-              </div>
-            </article>
-            <article class="sigma_recent-post">
-              <a href="blog-details.html"><img src="/themes/frontend/assets/img/blog/sm/3.jpg" alt="post"></a>
-              <div class="sigma_recent-post-body">
-                <a href="blog-details.html"> <i class="far fa-calendar"></i> May 20, 2024</a>
-                <h6> <a href="blog-details.html">As we've all discovered by now, the world can change</a> </h6>
-              </div>
-            </article>
-          </div>
         </div>
-      </div>
+        <div class="footer__copytext">
+            <p class="wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">&copy; All Copyright 2023 by <a
+                    href="#0" class="text-white primary-hover">Sadaka</a></p>
+        </div>
+    </footer>
+    <!-- Footer area end here -->
+
+    <!-- Back to top area start here -->
+    <div class="scroll-up">
+        <svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
     </div>
+    <!-- Back to top area end here -->
 
-    <!-- Footer Bottom -->
-    <div class="sigma_footer-bottom">
-      <div class="container-fluid">
-        <div class="sigma_footer-copyright">
-          <p> Copyright © Martaala - <a href="#" class="custom-primary">2024</a> </p>
-        </div>
-        <div class="sigma_footer-logo">
-          <img src="/themes/frontend/assets/img/logo.png" alt="logo">
-        </div>
-        <ul class="sigma_sm square">
-          <li>
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-  </footer>
-  <!-- partial -->
-
-  <!-- partial:partia/__scripts.html -->
-  <script src="/themes/frontend/assets/js/plugins/jquery-3.4.1.min.js"></script>
-  <script src="/themes/frontend/assets/js/plugins/popper.min.js"></script>
-  <script src="/themes/frontend/assets/js/plugins/bootstrap.min.js"></script>
-  <script src="/themes/frontend/assets/js/plugins/imagesloaded.min.js"></script>
-  <script src="/themes/frontend/assets/js/plugins/jquery.magnific-popup.min.js"></script>
-  <script src="/themes/frontend/assets/js/plugins/jquery.countdown.min.js"></script>
-  <script src="/themes/frontend/assets/js/plugins/jquery.waypoints.min.js"></script>
-  <script src="/themes/frontend/assets/js/plugins/jquery.counterup.min.js"></script>
-  <script src="/themes/frontend/assets/js/plugins/jquery.zoom.min.js"></script>
-  <script src="/themes/frontend/assets/js/plugins/jquery.inview.min.js"></script>
-  <script src="/themes/frontend/assets/js/plugins/jquery.event.move.js"></script>
-  <script src="/themes/frontend/assets/js/plugins/wow.min.js"></script>
-  <script src="/themes/frontend/assets/js/plugins/isotope.pkgd.min.js"></script>
-  <script src="/themes/frontend/assets/js/plugins/slick.min.js"></script>
-  <script src="/themes/frontend/assets/js/plugins/ion.rangeSlider.min.js"></script>
-
-  <script src="/themes/frontend/assets/js/main.js"></script>
-  <!-- partial -->
-
+    <!-- Jquery 3. 7. 1 Min Js -->
+    <script src="/themes/frontend/assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap min Js -->
+    <script src="/themes/frontend/assets/js/bootstrap.min.js"></script>
+    <!-- Mean menu Js -->
+    <script src="/themes/frontend/assets/js/meanmenu.js"></script>
+    <!-- Swiper bundle min Js -->
+    <script src="/themes/frontend/assets/js/swiper-bundle.min.js"></script>
+    <!-- Counterup min Js -->
+    <script src="/themes/frontend/assets/js/jquery.counterup.min.js"></script>
+    <!-- Wow min Js -->
+    <script src="/themes/frontend/assets/js/wow.min.js"></script>
+    <!-- Magnific popup min Js -->
+    <script src="/themes/frontend/assets/js/magnific-popup.min.js"></script>
+    <!-- Nice select min Js -->
+    <script src="/themes/frontend/assets/js/nice-select.min.js"></script>
+    <!-- Isotope pkgd min Js -->
+    <!-- <script src="/themes/frontend/assets/js/isotope.pkgd.min.html"></script> -->
+    <!-- Waypoints Js -->
+    <script src="/themes/frontend/assets/js/jquery.waypoints.js"></script>
+    <!-- Script Js -->
+    <script src="/themes/frontend/assets/js/script.js"></script>
 </body>
-
-
-<!-- Mirrored from slidesigma.com/themes/html/martalaa/home-v2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Feb 2024 04:23:03 GMT -->
 </html>
