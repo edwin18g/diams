@@ -275,7 +275,7 @@ class User extends CI_Controller
 			{
 
 				// $this->template->build('home', $data);
-				// $this->pageName = 'home';
+				$data['pageName'] = 'home';
 				$this->load->view('frontend_layout', $data);
 			}
 
