@@ -1,111 +1,55 @@
 
-	<style>
-		.img-blck img{
-		    width: 100%;
-    height: 200px;
-    object-fit: cover;}	</style>
-	<div class="page-name-block" >
-	  
-		<div class="page-content-block ">
-			<span class="Page-title">Administration <i class="fa fa-angle-double-right"></i></span> 
-		
-		<input type="text" class="form-control serach-btn width-auto"  onkeyup="searchkey(this.value)" name="query" placeholder="<?php echo 'Find Administration'//echo phrase('search_user'); ?>"<?php echo ($keywords != null ? ' value="' . $keywords . '"' : 'test'); ?> />
-			
-  
- 
-  		<?php foreach($p_type as $key=>$pType): $pTypeurl = slugify($pType); ?>
-  		
-  	<a class="btn btn-link dropdown-toggle filter-content" href="#<?php echo $pTypeurl?>" data-id="<?php echo $key?>"><?php echo $pType ?></a>
-  		
-  		
-									
-										<?php endforeach;?>
-										
-   
-  	
- 
-	
-				
-		</div>
-	</div>
-	<br /><br /><br />
-	<br />
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 ">
-				<?php if($keywords): ?>
-				<br />
-				<div class="alert alert-<?php echo ($count > 0 ? 'info' : 'danger'); ?>"><?php echo phrase('showing'); ?> <b><?php echo $offset . ' - ' . ($count > $limit && $limit+$offset < $count ? $limit+$offset : $count) . ' ' . phrase('from') . ' ' . ($count > 0 ? $count : 0); ?></b> <?php echo phrase('results_for_keywords'); ?> <b>"<?php echo $keywords; ?>"</b></div>
-				<?php endif; ?>
-				
-				<?php
-					$n	= 1; ?>
-					
-				<div class="row ">
-				<?php 	foreach($administration as $key =>$role): ?>
-					<?php 
 
-					$parent_block   = "col-md-12";
-					$image_block    = "col-md-5";
-					$caption_block  = "col-md-7";
-					if($role['user'][0]['a_type'] == 1  )
-					{
-					$parent_block = "col-md-3 col-md-offset-4 text-center";	
+<!-- Page banner area start here -->
+<section class="banner__inner-page bg-image pt-160 pb-160 bg-image"
+            data-background="assets/images/banner/banner-inner-page.jpg">
+            <div class="container">
+                <h2 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">Volunteer</h2>
+                <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    <a href="index.html">Home</a><span><i class="fa-regular fa-angles-right mx-2"></i>Volunteer</span>
+                </div>
+            </div>
+        </section>
+        <!-- Page banner area end here -->
+
+        <!-- Team area start here -->
+        <section class="team-area pt-120 pb-120">
+            <div class="container">
+                <div class="row g-4">
+                    
+					<?php 	foreach($administration as $key =>$role): ?>
 				
-					$image_block    = "col-md-12 img-blck";
-					$caption_block  = "col-md-12";
-					}?>
-					<div class="<?=$parent_block?>"><h2><?=$role['type_name']?></h2>
-						<?php foreach($role['user'] as $rkey =>$c): 
-						
-							$size =($c['a_type'] == 1)?"12":(($c['a_type'] == 2)?"4":"3"); ?>
-							
-							<div class="col-sm-<?=$size?> ">
-								
-							<?php	$hex		= '#' . random_hex();?>
-				
-					<div class="first image-placeholder relative card">
-									<div class="<?=	$image_block?>">
-										<a href="<?=base_url($c['userName']) ?>" class="ajaxloads hoverCard">
-											<img src="<?=base_url('uploads/users/thumbs/' . imageCheck('users', getUserPhoto($c['userID']), 1)) ?>" class="img-rounded bordered img-responsive" alt="" />
-										</a>
-									</div>
-									<div class="<?=	$image_block?> relative">
-									
-										<a href="<?=base_url($c['userName'])?>" class="ajaxloads hoverCard">
-											<b><?=$c['full_name'] ?></b> 
-										</a>
-										<br />
-										<small><?= $c['a_role'] ?></small>
-									</div>
-								
-							
-						
 					
-					</div>
-				
-							</div>
+						<?php foreach($role['user'] as $rkey =>$c): ?>
+
+<div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                        <div class="team__item image">
+                            <img src="<?=base_url('uploads/users/thumbs/' . imageCheck('users', getUserPhoto($c['userID']), 1)) ?>" alt="image">
+                            <div class="team__content">
+                                <div class="social-icon mb-30">
+                                    <a href="#0"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a class="active" href="#0"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#0"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="#0"><i class="fa-brands fa-pinterest-p"></i></a>
+                                </div>
+                                <div class="content">
+                                    <h4><a href="team-single.html" class="primary-hover"><?=$c['full_name'] ?></a></h4>
+                                    <span><?= $c['a_role'] ?></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+							
+							
+
 						
 						<?php endforeach;?>
-						
-						</div><br>
+				
 						
 					<?php endforeach;?>
-					</div>
-				
-				
-				<div class="row">
-					<div class="col-sm-12 text-center">
-					
-						<?php
-						if($keywords)
-						{
-							echo generatePagination('userSearch', $keywords, null, $keywords, $limit, $offset);
-						}
-						?>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                   
+                    
+                </div>
+            </div>
+        </section>
+       

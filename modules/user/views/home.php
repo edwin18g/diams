@@ -2,8 +2,10 @@
   <section class="banner-two-area">
             <div class="swiper banner-two__slider">
                 <div class="swiper-wrapper">
+                  <?php foreach($home_slider as $c):?>
                     <div class="swiper-slide">
-                        <div class="slide-bg" data-background="/themes/frontend/assets/images/banner/banner-image1.jpg"></div>
+                    
+                        <div class="slide-bg" data-background="<?php echo  base_url('uploads/snapshots/' . imageCheck('snapshots', $c['snapshotFile'], 0)) ?>"></div>
                         <div class="container">
                             <div class="banner-two__content">
                                 <h4 data-animation="fadeInUp" data-delay=".3s">Change The World Together</h4>
@@ -21,25 +23,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="slide-bg" data-background="/themes/frontend/assets/images/banner/banner-image2.jpg"></div>
-                        <div class="container">
-                            <div class="banner-two__content">
-                                <h4 data-animation="fadeInUp" data-delay=".3s">Change The World Together</h4>
-                                <h1 data-animation="fadeInUp" data-delay=".5s">Support Kids & Elders <br> Give
-                                    Generously</h1>
-                                <div class="btn-one mt-50" data-animation="fadeInUp" data-delay="1s">
-                                    <span class="btn-circle">
-                                    </span>
-                                    <a href="cause-single.html" class="btn-inner">
-                                        <span class="btn-text">
-                                            DONATE NOW
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  <?php endforeach;?>
+                    
                 </div>
             </div>
             <div class="banner-two__arry-btn">

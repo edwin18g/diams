@@ -1,5 +1,95 @@
 
+	<?php 
+		$totSegments = $this->uri->total_segments();
+		$uriSegments = $this->uri->segment($totSegments);
+		if(!is_numeric($uriSegments)){
+			$offset = 0;
+		} else if(is_numeric($uriSegments)){
+			$offset = $this->uri->segment($totSegments);
+		}
+		$limit = 12;
+	?>
 	
+	
+	<div class="container">
+	
+		<div class="row">
+	<div class="bg-info">
+		<div class="container-fluid first-child">
+			<div class="row">
+				<div class="col-sm-7  hidden-xs">
+				   <span class="Page-title">User <i class="fa fa-angle-double-right"></i> Gallerys <i class="fa fa-angle-double-right"></i></span>
+				</div>
+				<div class="col-sm-2">
+					<div class="col-12-xs">
+						<a href="<?php echo base_url('user/snapshots/add'); ?>" class="btn btn-md btn-block btn-primary newPost"><i class="fa fa-plus"></i> &nbsp; Add Image </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+				
+			<div class="col-md-12 sticky">
+				<div class="row grid">
+
+					<?php
+						$n = 1;
+						$snapshots = getPosts('snapshots', ($this->session->userdata('user_level') == 1 ? null : $this->session->userdata('userID')), null, $limit, $offset);
+						if($snapshots)
+						{
+							foreach($snapshots as $c)
+							{
+								$btn =($c['home_slider'] == 1)?"success":"default";
+								echo '
+									<div class="col-sm-3 col-xs-6 grid-item" id="snapshot' . $c['snapshotID'] . '">
+										<div class="image-placeholder">
+											<a href="' . base_url('snapshots/' . $c['snapshotSlug']) . '" class="ajax"><img width="100%" style="height: 150px;object-fit: cover;"  class="img-responsive" src="' . base_url('uploads/snapshots/thumbs/' . imageCheck('snapshots', $c['snapshotFile'], 1)) . '" alt="' . truncate($c['snapshotContent'], 50) . '" /></a>
+											<div class="col-sm-12" style="border-top:1px solid #ddd;padding-top:10px">
+												<div class="btn-group btn-group-justified">
+													<a class="btn btn-'.$btn.' btn-sm " href="javascript:change_slider_status('.$c['snapshotID'].')" id="slider_'.$c['snapshotID'].'"><i class="btn-icon-only fa fa-home"></i>Slider</a>
+													<a class="btn btn-default btn-sm newPost" href="' . base_url('user/snapshots/edit/' . $c['snapshotSlug']) . '"><i class="btn-icon-only fa fa-edit"></i> ' . phrase('edit') . '</a>
+													<a class="btn btn-default btn-sm" href="javascript:void(0)" onclick="confirm_modal(\'' . base_url('user/snapshots/remove/' . $c['snapshotSlug']) . '\', \'snapshot' . $c['snapshotID'] . '\')"><i class="btn-icon-only fa fa-times"></i> ' . phrase('remove') . '</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								';
+							}
+						}
+					?>
+					
+				</div>
+				
+				<hr/>
+				<div class="row">
+					<div class="col-sm-12 text-center">
+					
+						<?php echo generatePagination('snapshots', null, ($this->session->userdata('user_level') == 1 ? null : $this->session->userdata('userID')), 'user', $limit, $offset); ?>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script>
+	function change_slider_status(id)
+	{
+		$('#slider_'+id).removeClass('btn-success');
+		$('#slider_'+id).removeClass('btn-default');
+		
+		 $.ajax({
+            url:'<?php echo base_url('user/snapshots/change_status') ?>',
+            type: "POST",
+            data: {"is_ajax": true, 'snapshotID': id},
+            success: function (response) {
+            	var data = $.parseJSON(response);
+    $('#slider_'+id).addClass(data['class']);
+		            
+            }
+        });
+	}
+</script>
 
 	<!-- Main Content -->
 	<div class="hk-pg-wrapper pb-0">
@@ -143,42 +233,42 @@
 													<div class="row gx-3 row-cols-xxl-6 row-cols-xl-5 row-cols-lg-3 row-cols-md-2 row-cols-1 hk-gallery">
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock1.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock1.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock1.jpg" style="background-image:url('dist/img/gallery/mock1.jpg');">
 																</div>
 																<span class="gallery-star marked"><span class="feather-icon"><i data-feather="star"></i></span></span>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock2.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock2.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock2.jpg" style="background-image:url('dist/img/gallery/mock2.jpg');">
 																</div>
 																<span class="gallery-star"><span class="feather-icon"><i data-feather="star"></i></span></span>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock3.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock3.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock3.jpg" style="background-image:url('dist/img/gallery/mock3.jpg');">
 																</div>
 																<span class="gallery-star"><span class="feather-icon"><i data-feather="star"></i></span></span>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock4.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock4.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock4.jpg" style="background-image:url('dist/img/gallery/mock4.jpg');">
 																</div>
 																<span class="gallery-star"><span class="feather-icon"><i data-feather="star"></i></span></span>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock5.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock5.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock5.jpg" style="background-image:url('dist/img/gallery/mock5.jpg');">
 																</div>
 																<span class="gallery-star marked"><span class="feather-icon"><i data-feather="star"></i></span></span>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img gallery-video" data-sub-html="#caption" data-src="https://www.youtube.com/watch?v=BvXR97eR1QE" data-poster="/themes/admin/dist/img/gallery/mock6.jpg" data-sub-html="#caption3" style="background-image:url('/themes/admin/dist/img/gallery/mock6.jpg');">
+																<div class="card card-border gallery-img gallery-video" data-sub-html="#caption" data-src="https://www.youtube.com/watch?v=BvXR97eR1QE" data-poster="dist/img/gallery/mock6.jpg" data-sub-html="#caption3" style="background-image:url('dist/img/gallery/mock6.jpg');">
 																</div>
 																<span class="gallery-star marked"><span class="feather-icon"><i data-feather="star"></i></span></span>
 															</a>
@@ -263,39 +353,39 @@
 													<div class="row gx-3 row-cols-xxl-6 row-cols-xl-5 row-cols-lg-3 row-cols-md-2 row-cols-1 hk-gallery">
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock6.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock6.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock6.jpg" style="background-image:url('dist/img/gallery/mock6.jpg');">
 																</div>
 																<span class="gallery-star marked"><span class="feather-icon"><i data-feather="star"></i></span></span>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock7.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock7.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock7.jpg" style="background-image:url('dist/img/gallery/mock7.jpg');">
 																</div>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock8.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock8.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock8.jpg" style="background-image:url('dist/img/gallery/mock8.jpg');">
 																</div>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock9.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock9.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock9.jpg" style="background-image:url('dist/img/gallery/mock9.jpg');">
 																</div>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock10.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock10.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock10.jpg" style="background-image:url('dist/img/gallery/mock10.jpg');">
 																</div>
 																<span class="gallery-star marked"><span class="feather-icon"><i data-feather="star"></i></span></span>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img gallery-video" data-sub-html="#caption" data-src="https://www.youtube.com/watch?v=BvXR97eR1QE" data-poster="/themes/admin/dist/img/gallery/mock2.jpg" data-sub-html="#caption3" style="background-image:url('/themes/admin/dist/img/gallery/mock1.jpg');">
+																<div class="card card-border gallery-img gallery-video" data-sub-html="#caption" data-src="https://www.youtube.com/watch?v=BvXR97eR1QE" data-poster="dist/img/gallery/mock2.jpg" data-sub-html="#caption3" style="background-image:url('dist/img/gallery/mock1.jpg');">
 																</div>
 																<span class="gallery-star marked"><span class="feather-icon"><i data-feather="star"></i></span></span>
 															</a>
@@ -317,39 +407,39 @@
 													<div class="row gx-3 row-cols-xxl-6 row-cols-xl-5 row-cols-lg-3 row-cols-md-2 row-cols-1 hk-gallery">
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock11.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock11.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock11.jpg" style="background-image:url('dist/img/gallery/mock11.jpg');">
 																</div>
 																<span class="gallery-star marked"><span class="feather-icon"><i data-feather="star"></i></span></span>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock12.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock12.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock12.jpg" style="background-image:url('dist/img/gallery/mock12.jpg');">
 																</div>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock13.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock13.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock13.jpg" style="background-image:url('dist/img/gallery/mock13.jpg');">
 																</div>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock14.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock14.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock14.jpg" style="background-image:url('dist/img/gallery/mock14.jpg');">
 																</div>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="/themes/admin/dist/img/gallery/mock15.jpg" style="background-image:url('/themes/admin/dist/img/gallery/mock15.jpg');">
+																<div class="card card-border gallery-img" data-sub-html="#caption" data-src="dist/img/gallery/mock15.jpg" style="background-image:url('dist/img/gallery/mock15.jpg');">
 																</div>
 																<span class="gallery-star marked"><span class="feather-icon"><i data-feather="star"></i></span></span>
 															</a>
 														</div>
 														<div class="col">
 															<a href="#">
-																<div class="card card-border gallery-img gallery-video" data-sub-html="#caption" data-src="https://www.youtube.com/watch?v=BvXR97eR1QE" data-poster="/themes/admin/dist/img/gallery/mock12.jpg" data-sub-html="#caption3" style="background-image:url('/themes/admin/dist/img/gallery/mock12.jpg');">
+																<div class="card card-border gallery-img gallery-video" data-sub-html="#caption" data-src="https://www.youtube.com/watch?v=BvXR97eR1QE" data-poster="dist/img/gallery/mock12.jpg" data-sub-html="#caption3" style="background-image:url('dist/img/gallery/mock12.jpg');">
 																</div>
 																<span class="gallery-star marked"><span class="feather-icon"><i data-feather="star"></i></span></span>
 															</a>

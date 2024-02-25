@@ -41,6 +41,8 @@ class Snapshots extends CI_Controller
 	
 	function index()
 	{
+
+		
 		if(!$this->session->userdata('loggedIn')) return error(403, ($this->input->is_ajax_request() ? 'ajax' : null));
 		
 		$data['meta']		= array(
@@ -64,7 +66,13 @@ class Snapshots extends CI_Controller
 		}
 		else
 		{
+			$layout = 'admin';
+			if(!empty($_GET['layout'])){
+				$layout = 'default';
+			}
 			$this->template->set_partial('navigation', 'dashboard_navigation');
+			$this->template->set_theme($layout);
+			$this->template->set_layout($layout);
 			$this->template->build('snapshots/posts', $data);
 		}
 	}

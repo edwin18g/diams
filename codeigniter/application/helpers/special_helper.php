@@ -705,6 +705,7 @@ if(!function_exists('imageCheck'))
 		{
 			$uri = 'uploads/' . $name;
 		}
+
 		if(file_exists($uri))
 		{
 			return $name;

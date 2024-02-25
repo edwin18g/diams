@@ -4,16 +4,10 @@
 // die;
 ?>
 <!DOCTYPE html>
-<!-- 
-Jampack
-Author: Hencework
-Contact: contact@hencework.com
--->
-<html lang="en">
 
-<!-- Mirrored from hencework.com/theme/jampack/classic/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Feb 2024 09:46:28 GMT -->
+<html lang="en">
 <head>
-    <!-- Meta Tags -->
+
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -379,8 +373,8 @@ Contact: contact@hencework.com
 				<div class="menu-content-wrap">
 					<div class="menu-group">
 						<ul class="navbar-nav flex-column">
-							<li class="nav-item active" >
-								<a class="nav-link" href="<?php echo base_url('user/dashboard')?>">
+							<li class="nav-item <?php echo (current_url() == base_url('admin')?'active':'')?>" >
+								<a class="nav-link" href="<?php echo base_url('admin')?>">
 									<span class="nav-icon-wrap">
 										<span class="svg-icon">
 											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-template" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -499,8 +493,8 @@ Contact: contact@hencework.com
 								</a>
 							</li>
 
-							<li class="nav-item">
-								<a class="nav-link" href="gallery.html">
+							<li class="nav-item <?php echo (current_url() == base_url('admin/gallery')?'active':'')?>">
+								<a class="nav-link" href="<?php echo base_url('admin/gallery')?>">
 									<span class="nav-icon-wrap">
 										<span class="svg-icon">
 											<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-photo" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
