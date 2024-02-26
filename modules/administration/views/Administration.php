@@ -2,11 +2,11 @@
 
 <!-- Page banner area start here -->
 <section class="banner__inner-page bg-image pt-160 pb-160 bg-image"
-            data-background="assets/images/banner/banner-inner-page.jpg">
+            data-background="/themes/frontend/assets/images/banner/banner-inner-page.jpg">
             <div class="container">
-                <h2 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">Volunteer</h2>
+                <h2 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">Administration</h2>
                 <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                    <a href="index.html">Home</a><span><i class="fa-regular fa-angles-right mx-2"></i>Volunteer</span>
+                    <a href="index.html">Home</a><span><i class="fa-regular fa-angles-right mx-2"></i>Administration</span>
                 </div>
             </div>
         </section>
@@ -16,10 +16,9 @@
         <section class="team-area pt-120 pb-120">
             <div class="container">
                 <div class="row g-4">
-                    
 					<?php 	foreach($administration as $key =>$role): ?>
-				
-					
+				<h2 class="text-center"><?=$role['type_name']?></h2>
+                <div class="d-flex g-4 justify-content-center mt-1 row">
 						<?php foreach($role['user'] as $rkey =>$c): ?>
 
 <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
@@ -44,7 +43,8 @@
 
 						
 						<?php endforeach;?>
-				
+                        <hr>
+				<div>
 						
 					<?php endforeach;?>
                    
