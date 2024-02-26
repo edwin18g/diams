@@ -83,11 +83,13 @@ if(empty($pageName)){
                                         <a href="<?php echo base_url('posts')?>">posts</a>
                                     </li>
                                     <li>
-                                    <a href="<?php echo base_url('snapshots')?>">Gallery</a>
+                                        <a href="<?php echo base_url('posts')?>">News & Events</a>
                                     </li>
                                     <li>
-                                    <a href="<?php echo base_url('pages/history')?>">History</a>
-                                        
+                                        <a href="<?php echo base_url('snapshots')?>">Gallery</a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo base_url('pages/history')?>">History</a>                                        
                                     </li>
                                 </ul>
                             </li>
