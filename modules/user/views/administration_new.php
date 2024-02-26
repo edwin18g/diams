@@ -2,23 +2,32 @@
     <!-- Wrapper -->
 	<div class="hk-wrapper" data-layout="vertical"  data-menu="light" data-footer="simple" data-hover="active">
 		<!-- Main Content -->
-		
+		<div class="hk-pg-wrapper pb-0">
 			<!-- Page Body -->
 			<div class="hk-pg-body py-0">
-				<div class="contactapp-wrap">
-
+				<div class="contactapp-wrap contactapp-sidebar-toggle">
+					
 					<div class="contactapp-content">
 						<div class="contactapp-detail-wrap">
 							<header class="contact-header">
-								<div class="d-flex align-items-center">									
-                                    <div class="contactapp-title " role="button" aria-haspopup="true" aria-expanded="false">
-                                        <h1>Administration List</h1>                                       
-                                    </div>		
-                                    <button type="button" class="btn btn-primary btn-rounded btn-block mb-4" data-bs-toggle="modal" data-bs-target="#add_new_contact">
-                                        Add new Priest
-                                    </button>
+								<div class="d-flex align-items-center">
+									<div class="dropdown">
+										<a class="contactapp-title dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+											<h1>Contacts</h1>
+										</a>
+										<div class="dropdown-menu">
+											<a class="dropdown-item" href="#"><span class="feather-icon dropdown-icon"><i data-feather="users"></i></span><span>All Contacts</span></a>
+											<a class="dropdown-item" href="#"><span class="feather-icon dropdown-icon"><i data-feather="star"></i></span><span>Important</span></a>
+											<a class="dropdown-item" href="#"><span class="feather-icon dropdown-icon"><i data-feather="archive"></i></span><span>Archive</span></a>
+											<a class="dropdown-item" href="#"><span class="feather-icon dropdown-icon"><i data-feather="edit"></i></span><span>Pending</span></a>
+											<a class="dropdown-item" href="#"><span class="feather-icon dropdown-icon"><i data-feather="trash-2"></i></span><span>Deleted</span></a>
+										</div>
+										
+									</div>
+									<button type="button" class="btn btn-primary btn-rounded btn-block m-1" data-bs-toggle="modal" data-bs-target="#add_new_contact">
+									Add new contact
+								</button>
 								</div>
-
 								<div class="contact-options-wrap">	
 									<a class="btn btn-icon btn-flush-dark flush-soft-hover dropdown-toggle no-caret active" href="#" data-bs-toggle="dropdown"><span class="icon"><span class="feather-icon"><i data-feather="list"></i></span></span></a>
 									<div class="dropdown-menu dropdown-menu-end">
@@ -51,12 +60,70 @@
 											<span class="feather-icon d-none"><i data-feather="chevron-down"></i></span>
 										</span>
 									</a>
-								</div>								
+								</div>
+								<div class="hk-sidebar-togglable active"></div>
 							</header>
 							<div class="contact-body">
 								<div data-simplebar class="nicescroll-bar">
+									<div class="collapse" id="collapseQuick">
+										<div class="quick-access-form-wrap">
+											<form class="quick-access-form border">
+												<div class="row gx-3">
+													<div class="col-xxl-10">
+														<div class="position-relative">
+															<div class="dropify-square">
+																<input type="file"  class="dropify-1"/>
+															</div>
+															<div class="col-md-12">
+																<div class="row gx-3">
+																	<div class="col-lg-4">
+																		<div class="form-group">
+																			<input class="form-control" placeholder="First name*" value="" type="text">
+																		</div>
+																		<div class="form-group">
+																			<input class="form-control" placeholder="Last name*" value="" type="text">
+																		</div>
+																	</div>
+																	<div class="col-lg-4">
+																		<div class="form-group">
+																			<input class="form-control" placeholder="Email Id*" value="" type="text">
+																		</div>
+																		<div class="form-group">
+																			<input class="form-control" placeholder="Phone" value="" type="text">
+																		</div>
+																	</div>
+																	<div class="col-lg-4">
+																		<div class="form-group">
+																			<input class="form-control"  placeholder="Department" value="" type="text">
+																		</div>
+																		<div class="form-group">
+																			<select id="input_tags" class="form-control" multiple="multiple">
+																				<option selected="selected">Collaborator</option>
+																				<option>Designer</option>
+																				<option selected="selected">Developer</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-xxl-2">
+														<div class="form-group">
+															<button data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"  class="btn btn-block btn-primary ">Create New
+															</button>
+														</div>
+														<div class="form-group">
+															<button data-bs-toggle="collapse" disabled  data-bs-target="#collapseExample" aria-expanded="false"  class="btn btn-block btn-secondary">Discard
+															</button>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
 									<div class="contact-list-view">
-										<table id="datable_1" class="table nowrap w-100 mb-5">
+									<table id="datable_1" class="table nowrap w-100 mb-5">
 											<thead>
 												<tr>
 													<th><span class="form-check mb-0">
@@ -182,24 +249,31 @@
 							</div>
 						</div>
 						<!-- /Edit Info -->
-						<div id="delete_administrator" class="modal fade add-new-contact" tabindex="-1" role="dialog" aria-hidden="true">
-							<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+						
+						<!-- Add Label -->
+						<div id="add_new_label" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered modal-sm" role="document">
 								<div class="modal-content">
 									<div class="modal-body">
 										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
 											<span aria-hidden="true">×</span>
 										</button>
-										<p>Do you want to delete the priest <b><span id="delete_name"></span></b>?</p>
-									</div>
-									<div class="modal-footer align-items-center">
-										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
-										<button type="button" class="btn btn-primary" id="delete_administrator_data">Delete</button>
+										<h6 class="text-uppercase fw-bold mb-3">Add Label</h6>
+										<form>
+											<div class="row gx-3">
+												<div class="col-sm-12">
+													<div class="form-group">
+														<input class="form-control" type="text" placeholder="Label Name"/>
+													</div>
+												</div>
+											</div>
+											<button type="button" class="btn btn-primary float-end" data-bs-dismiss="modal">Add</button>
+										</form>
 									</div>
 								</div>
 							</div>
 						</div>
-
-
+						<!-- Add Label -->
 						
 						<!-- Add Tag -->
 						<div id="add_new_tag" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -235,7 +309,7 @@
 				</div>
 			</div>
 			<!-- /Page Body -->
-		
+		</div>
 		<!-- /Main Content -->
 	</div>
     <!-- /Wrapper -->
