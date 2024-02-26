@@ -10,7 +10,7 @@ if(empty($pageName)){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sadaka - Non Profit Charity HTML Template</title>
+    <title>Kuzhithurai Diocese</title>
     <!-- Favicon img -->
     <link rel="shortcut icon" href="/themes/frontend/assets/images/favicon.png">
     <!-- Bootstarp min css -->
@@ -83,11 +83,13 @@ if(empty($pageName)){
                                         <a href="<?php echo base_url('posts')?>">posts</a>
                                     </li>
                                     <li>
-                                    <a href="<?php echo base_url('snapshots')?>">Gallery</a>
+                                        <a href="<?php echo base_url('posts')?>">News & Events</a>
                                     </li>
                                     <li>
-                                    <a href="<?php echo base_url('pages/history')?>">History</a>
-                                        
+                                        <a href="<?php echo base_url('snapshots')?>">Gallery</a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo base_url('pages/history')?>">History</a>                                        
                                     </li>
                                 </ul>
                             </li>
