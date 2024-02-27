@@ -8,9 +8,10 @@
                         <div class="slide-bg" data-background="<?php echo  base_url('uploads/snapshots/' . imageCheck('snapshots', $c['snapshotFile'], 0)) ?>"></div>
                         <div class="container">
                             <div class="banner-two__content">
-                                <h4 data-animation="fadeInUp" data-delay=".3s">Change The World Together</h4>
-                                <h1 data-animation="fadeInUp" data-delay=".5s">Support Kids & Elders <br> Give
-                                    Generously</h1>
+                                <!-- <h4 data-animation="fadeInUp" data-delay=".3s">Change The World Together</h4> -->
+                                <br>
+                                <br>
+                                <h1 data-animation="fadeInUp" data-delay=".5s"><?=$c['snapshotContent']?></h1>
                                 <div class="btn-one mt-50" data-animation="fadeInUp" data-delay="1s">
                                     <span class="btn-circle">
                                     </span>
@@ -105,9 +106,10 @@
                     <div class="col-lg-6">
                         <div class="section-header mb-20">
                             <h5 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                                <i class="fa-regular fa-angles-left pe-1"></i> ABOUT US <i
+                                <i class="fa-regular fa-angles-left pe-1"></i> Bishop <i
                                     class="fa-regular fa-angles-right ps-1"></i>
                             </h5>
+                           
                             <h2 class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                             The Most Rev. Albert Anastas</h2>
                             <p class="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">It is a long
@@ -716,7 +718,9 @@
             </div>
             <div class="swiper testimonial__slider">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <?php if(!empty($getPriests)):
+                        foreach ($getPriests as $key => $priest):?>
+ <div class="swiper-slide">
                         <div class="testimonial__item">
                             <svg class="shape" width="59" height="67" viewBox="0 0 59 67" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -733,7 +737,7 @@
 
                             <div class="top">
                                 <div class="image">
-                                    <img src="/themes/frontend/assets/images/testimonial/testimonial-image1.png" alt="image">
+                                    <img src="<?=base_url('uploads/users/thumbs/' . imageCheck('users', getUserPhoto($priest['userID']), 1))?>" alt="image">
                                     <svg width="32" height="28" viewBox="0 0 32 28" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -743,159 +747,24 @@
 
                                 </div>
                                 <div class="con">
-                                    <div class="star">
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                    </div>
-                                    <h5>Esther Howard</h5>
-                                    <span>Dog Trainer</span>
+                                  
+                                    <h5><?=$priest['full_name']?></h5>
+                                    <span><?=$priest['pr_parish']?></span>
                                 </div>
                             </div>
-                            <p class="mt-30">Dolor sit amet consectetur adipiscing elit. Integer nunc viverra the
+                            <!-- <p class="mt-30">Dolor sit amet consectetur adipiscing elit. Integer nunc viverra the
                                 laoreet
                                 est, a pretium
                                 metus aliquam eget. Maecenas
-                                porta is nunc ut viverra. Aenean pulvinar maximus leo.</p>
+                                porta is nunc ut viverra. Aenean pulvinar maximus leo.</p> -->
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial__item">
-                            <svg class="shape" width="59" height="67" viewBox="0 0 59 67" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <mask style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="59"
-                                    height="67">
-                                    <rect width="59" height="67" fill="#F74F22" />
-                                </mask>
-                                <g mask="url(#mask0_87_43)">
-                                    <circle opacity="0.7" cx="59" cy="9" r="56" fill="#F74F22" />
-                                    <circle cx="59" cy="9" r="47.5" fill="#F74F22" stroke="white"
-                                        stroke-dasharray="2 2" />
-                                </g>
-                            </svg>
+                        <?php endforeach;endif;
+                           
+                        ?>
 
-                            <div class="top">
-                                <div class="image">
-                                    <img src="/themes/frontend/assets/images/testimonial/testimonial-image2.png" alt="image">
-                                    <svg width="32" height="28" viewBox="0 0 32 28" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M29 28C30.625 28 32 26.625 32 25V10C32 4.4375 27.5 0 22 0H21.5C20.625 0 20 0.625 20 1.5V4.5C20 5.3125 20.625 6 21.5 6H22C24.1875 6 26 7.75 26 10V14H21C19.3125 14 18 15.3125 18 17V25C18 26.625 19.3125 28 21 28H29ZM11 28C12.625 28 14 26.625 14 25V10C14 4.4375 9.5 0 4 0H3.5C2.625 0 2 0.625 2 1.5V4.5C2 5.3125 2.625 6 3.5 6H4C6.1875 6 8 7.75 8 10V14H3C1.3125 14 0 15.3125 0 17V25C0 26.625 1.3125 28 3 28H11Z"
-                                            fill="#F74F22" />
-                                    </svg>
-
-                                </div>
-                                <div class="con">
-                                    <div class="star">
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                    </div>
-                                    <h5>Annette Black</h5>
-                                    <span>Software Developer</span>
-                                </div>
-                            </div>
-                            <p class="mt-30">Dolor sit amet consectetur adipiscing elit. Integer nunc viverra the
-                                laoreet
-                                est, a pretium
-                                metus aliquam eget. Maecenas
-                                porta is nunc ut viverra. Aenean pulvinar maximus leo.</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial__item">
-                            <svg class="shape" width="59" height="67" viewBox="0 0 59 67" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <mask style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="59"
-                                    height="67">
-                                    <rect width="59" height="67" fill="#F74F22" />
-                                </mask>
-                                <g mask="url(#mask0_87_43)">
-                                    <circle opacity="0.7" cx="59" cy="9" r="56" fill="#F74F22" />
-                                    <circle cx="59" cy="9" r="47.5" fill="#F74F22" stroke="white"
-                                        stroke-dasharray="2 2" />
-                                </g>
-                            </svg>
-
-                            <div class="top">
-                                <div class="image">
-                                    <img src="/themes/frontend/assets/images/testimonial/testimonial-image3.png" alt="image">
-                                    <svg width="32" height="28" viewBox="0 0 32 28" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M29 28C30.625 28 32 26.625 32 25V10C32 4.4375 27.5 0 22 0H21.5C20.625 0 20 0.625 20 1.5V4.5C20 5.3125 20.625 6 21.5 6H22C24.1875 6 26 7.75 26 10V14H21C19.3125 14 18 15.3125 18 17V25C18 26.625 19.3125 28 21 28H29ZM11 28C12.625 28 14 26.625 14 25V10C14 4.4375 9.5 0 4 0H3.5C2.625 0 2 0.625 2 1.5V4.5C2 5.3125 2.625 6 3.5 6H4C6.1875 6 8 7.75 8 10V14H3C1.3125 14 0 15.3125 0 17V25C0 26.625 1.3125 28 3 28H11Z"
-                                            fill="#F74F22" />
-                                    </svg>
-
-                                </div>
-                                <div class="con">
-                                    <div class="star">
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                    </div>
-                                    <h5>Kristin Watson</h5>
-                                    <span>Team Leader</span>
-                                </div>
-                            </div>
-                            <p class="mt-30">Dolor sit amet consectetur adipiscing elit. Integer nunc viverra the
-                                laoreet
-                                est, a pretium
-                                metus aliquam eget. Maecenas
-                                porta is nunc ut viverra. Aenean pulvinar maximus leo.</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial__item">
-                            <svg class="shape" width="59" height="67" viewBox="0 0 59 67" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <mask style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="59"
-                                    height="67">
-                                    <rect width="59" height="67" fill="#F74F22" />
-                                </mask>
-                                <g mask="url(#mask0_87_43)">
-                                    <circle opacity="0.7" cx="59" cy="9" r="56" fill="#F74F22" />
-                                    <circle cx="59" cy="9" r="47.5" fill="#F74F22" stroke="white"
-                                        stroke-dasharray="2 2" />
-                                </g>
-                            </svg>
-
-                            <div class="top">
-                                <div class="image">
-                                    <img src="/themes/frontend/assets/images/testimonial/testimonial-image4.png" alt="image">
-                                    <svg width="32" height="28" viewBox="0 0 32 28" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M29 28C30.625 28 32 26.625 32 25V10C32 4.4375 27.5 0 22 0H21.5C20.625 0 20 0.625 20 1.5V4.5C20 5.3125 20.625 6 21.5 6H22C24.1875 6 26 7.75 26 10V14H21C19.3125 14 18 15.3125 18 17V25C18 26.625 19.3125 28 21 28H29ZM11 28C12.625 28 14 26.625 14 25V10C14 4.4375 9.5 0 4 0H3.5C2.625 0 2 0.625 2 1.5V4.5C2 5.3125 2.625 6 3.5 6H4C6.1875 6 8 7.75 8 10V14H3C1.3125 14 0 15.3125 0 17V25C0 26.625 1.3125 28 3 28H11Z"
-                                            fill="#F74F22" />
-                                    </svg>
-
-                                </div>
-                                <div class="con">
-                                    <div class="star">
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                    </div>
-                                    <h5>Ralph Edwards</h5>
-                                    <span>UI/UX Designer</span>
-                                </div>
-                            </div>
-                            <p class="mt-30">Dolor sit amet consectetur adipiscing elit. Integer nunc viverra the
-                                laoreet
-                                est, a pretium
-                                metus aliquam eget. Maecenas
-                                porta is nunc ut viverra. Aenean pulvinar maximus leo.</p>
-                        </div>
-                    </div>
+                   
+                   
                 </div>
             </div>
             <div class="btn-three mt-30">

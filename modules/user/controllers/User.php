@@ -250,6 +250,12 @@ class User extends CI_Controller
 	$data_pass   																	= array();
 	$data_pass['limit']														= 4;
 	$data_pass['order_by'] 												= array('column'=>'id','value'=>'RANDOM');
+	$getPriests																= $this->User_model->getPriests($data_pass);
+	$data['getPriests']   										= $getPriests; 
+
+	$data_pass   																	= array();
+	$data_pass['limit']														= 4;
+	$data_pass['order_by'] 												= array('column'=>'id','value'=>'RANDOM');
 	$data['randoam_commission']										= $this->User_model->getCommRand($data_pass);
 	$data_pass   																	= array();
 	$data_pass['limit']														= 4;
