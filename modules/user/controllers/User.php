@@ -230,35 +230,35 @@ class User extends CI_Controller
 	function home_page()
 	{
 			// home page
-		$data['meta']																= array(
-																													'title' 								=> 'Kuzhithurai Diocese',
-																													'descriptions'					=> phrase('whatever_you_writing_for_is_a_reportations'),
-																													'keywords'							=> 'kuzhithurai Diocese, Diocese',
-																													'image'									=> base_url('uploads/logo.png'),
-																													'author'								=> $this->settings['siteTitle']
-																												);
+		$data['meta']	= array(
+				'title' 		=> 'Kuzhithurai Diocese',
+				'descriptions'	=> phrase('whatever_you_writing_for_is_a_reportations'),
+				'keywords'		=> 'kuzhithurai Diocese, Diocese',
+				'image'			=> base_url('uploads/logo.png'),
+				'author'		=> $this->settings['siteTitle']
+			);
 		
 			 
-  $data['home_slider']													= $this->User_model->get_home_sliders();
-
-	$data['cachereset'] 													= 1;
-	$data_pass   																	= array();
-	$data_pass['limit']														= 4;
-	$data_pass['order_by'] 												= array('column'=>'id','value'=>'RANDOM');
-	$random_parish																= $this->User_model->getParishs($data_pass);
-	$data['randoam_parish']   										= $random_parish; 
-	$data_pass   																	= array();
-	$data_pass['limit']														= 4;
-	$data_pass['order_by'] 												= array('column'=>'id','value'=>'RANDOM');
-	$data['randoam_commission']										= $this->User_model->getCommRand($data_pass);
-	$data_pass   																	= array();
-	$data_pass['limit']														= 4;
-	$data_pass['order_by'] 												= array('column'=>'id','value'=>'RANDOM');
-	$data['feature_posts']												= $this->User_model->getPostFeatures($data_pass);
-	$data_pass   																	= array();
-	$data_pass['limit']														= 4;
-	$data_pass['order_by'] 												= array('column'=>'tvID','value'=>'RANDOM');
-	$data['media_posts']													= $this->User_model->getTvFeatures($data_pass);
+  	$data['home_slider']				= $this->User_model->get_home_sliders();
+	$data['cachereset'] 				= 1;
+	$data_pass   						= array();
+	$data_pass['limit']					= 4;
+	$data_pass['order_by'] 				= array('column'=>'id','value'=>'RANDOM');
+	$random_parish						= $this->User_model->getParishs($data_pass);
+	$data['randoam_parish']   			= $random_parish; 
+	$data_pass   						= array();
+	$data_pass['limit']					= 4;
+	$data_pass['order_by'] 				= array('column'=>'id','value'=>'RANDOM');
+	$data['randoam_commission']			= $this->User_model->getCommRand($data_pass);
+	$data_pass   						= array();
+	$data_pass['limit']					= 4;
+	$data_pass['order_by'] 				= array('column'=>'id','value'=>'RANDOM');
+	$data['feature_posts']				= $this->User_model->getPostFeatures($data_pass);
+	$data_pass   						= array();
+	$data_pass['limit']					= 4;
+	$data_pass['order_by'] 				= array('column'=>'tvID','value'=>'RANDOM');
+	$data['media_posts']				= $this->User_model->getTvFeatures($data_pass);
+	$data['bishop_details']				= $this->User_model->getBishopDetails();
 			
 	if($this->input->is_ajax_request())
 			{

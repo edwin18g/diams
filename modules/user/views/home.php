@@ -9,8 +9,8 @@
                         <div class="container">
                             <div class="banner-two__content">
                                 <h4 data-animation="fadeInUp" data-delay=".3s">Change The World Together</h4>
-                                <h1 data-animation="fadeInUp" data-delay=".5s">Support Kids & Elders <br> Give
-                                    Generously</h1>
+                                <h1 data-animation="fadeInUp" data-delay=".5s">Support Kids & Elders <br> Give Generously</h1>
+                                   
                                 <div class="btn-one mt-50" data-animation="fadeInUp" data-delay="1s">
                                     <span class="btn-circle">
                                     </span>
@@ -105,16 +105,15 @@
                     <div class="col-lg-6">
                         <div class="section-header mb-20">
                             <h5 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                                <i class="fa-regular fa-angles-left pe-1"></i> ABOUT US <i
+                                <i class="fa-regular fa-angles-left pe-1"></i><?php echo $bishop_details[0]['userName'] ?><i
                                     class="fa-regular fa-angles-right ps-1"></i>
                             </h5>
                             <h2 class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            The Most Rev. Albert Anastas</h2>
-                            <p class="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">It is a long
-                                established fact that a reader will be distracted the readable content of a
-                                page when looking at layout the
-                                point of using lorem Ipsum <br>
-                                less normal distribution of letters.</p>
+                                <?php echo $bishop_details[0]['full_name'] ?>
+                            </h2>
+                            <p class="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                                <?php echo $bishop_details[0]['bio'] ?>
+                            </p>
                         </div>
                         <div class="about__content">
                             <div class="d-flex align-content-center flex-wrap gap-4 mt-40 wow fadeInDown"
