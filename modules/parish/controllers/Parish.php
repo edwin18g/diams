@@ -53,9 +53,9 @@ class Parish extends CI_Controller
 		
 	
 	
-		$keyword              = ($this->input->post('keyword') != null)?$this->input->post('keyword'):(($_GET['keyword'])?$_GET['keyword']:false);
-		$type     						= ($this->input->post('slug'))?$this->input->post('slug'):(($_GET['slug'])?$_GET['slug']:0);
-		$limit                = ($_GET['limit'])?$_GET['limit']:$limit;
+		$keyword              = (!empty($this->input->post('keyword')))?$this->input->post('keyword'):(!empty($_GET['keyword'])?$_GET['keyword']:false);
+		$type     						= !empty($this->input->post('slug'))?$this->input->post('slug'):(!empty($_GET['slug'])?$_GET['slug']:0);
+		$limit                = (!empty($_GET['limit']))?$_GET['limit']:$limit;
 		if($type != '0')
 				{
 					if($type == '/' || $type == 'All' )

@@ -79,22 +79,25 @@ class Priests extends CI_Controller
 				foreach($data['search'] as $row)
 				{
 		
-			$htmlData .='<div class="col-sm-4 col-xs-6 ">
-							
-				 				<a href="'.base_url($row['userName']).'" class="">
-				 	<div class="col-sm-12 card-item">
-         		<div class="card ">
-             		<img class="card-img-profile" src="'. base_url('uploads/users/thumbs/' . imageCheck('users', getUserPhoto($row['userID']), 1)).'" alt="Card image cap">
-             		<div class="card-body">
-               		<h5 class="card-title card-warp">'.$row['full_name'].'</h5>
-               	
-               	
-             		</div>
-         		</div>
-       		</div>
-       		</a>
-								
-						</div>';
+			$htmlData .=' <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+			<div class="team__item image">
+				<img src="'. base_url('uploads/users/thumbs/' . imageCheck('users', getUserPhoto($row['userID']), 1)).'" alt="image">
+				<div class="team__content">
+					<div class="social-icon mb-30">
+						<a href="#0"><i class="fa-brands fa-facebook-f"></i></a>
+						<a class="active" href="#0"><i class="fa-brands fa-instagram"></i></a>
+						<a href="#0"><i class="fa-brands fa-linkedin-in"></i></a>
+						<a href="#0"><i class="fa-brands fa-pinterest-p"></i></a>
+					</div>
+					<div class="content">
+						<h4><a href="'.base_url($row['userName']).'" class="primary-hover">'.$row['full_name'].'</a></h4>
+						<span>Volunteer</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		';
 						
 						}
 			echo $htmlData; 

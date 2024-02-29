@@ -5,7 +5,6 @@
                 <div class="swiper-wrapper">
                   <?php foreach($home_slider as $c):?>
                     <div class="swiper-slide">
-                    
                         <div class="slide-bg" data-background="<?php echo  base_url('uploads/snapshots/' . imageCheck('snapshots', $c['snapshotFile'], 0)) ?>"></div>
                         <div class="container">
                             <div class="banner-two__content">
@@ -318,8 +317,8 @@
                 <div class="swiper-wrapper">
                     <?php if(!empty($getPriests)):
                         foreach ($getPriests as $key => $priest):?>
-                        <div class="swiper-slide">
-                            <div class="testimonial__item">
+                        <div class="swiper-slide ">
+                            <div class="testimonial__item m-0 pl-0">
                                 <div class="team__item image" >
                                     <img style="height:400px; object-fit:cover" src="<?=base_url('uploads/users/thumbs/' . imageCheck('users', getUserPhoto($priest['userID']), 1))?>" alt="image">
                                     <div class="team__content">
