@@ -239,26 +239,32 @@ class User extends CI_Controller
 			);
 		
 			 
-  	$data['home_slider']				= $this->User_model->get_home_sliders();
-	$data['cachereset'] 				= 1;
-	$data_pass   						= array();
-	$data_pass['limit']					= 4;
-	$data_pass['order_by'] 				= array('column'=>'id','value'=>'RANDOM');
-	$random_parish						= $this->User_model->getParishs($data_pass);
-	$data['randoam_parish']   			= $random_parish; 
-	$data_pass   						= array();
-	$data_pass['limit']					= 4;
-	$data_pass['order_by'] 				= array('column'=>'id','value'=>'RANDOM');
-	$data['randoam_commission']			= $this->User_model->getCommRand($data_pass);
-	$data_pass   						= array();
-	$data_pass['limit']					= 4;
-	$data_pass['order_by'] 				= array('column'=>'id','value'=>'RANDOM');
-	$data['feature_posts']				= $this->User_model->getPostFeatures($data_pass);
-	$data_pass   						= array();
-	$data_pass['limit']					= 4;
-	$data_pass['order_by'] 				= array('column'=>'tvID','value'=>'RANDOM');
-	$data['media_posts']				= $this->User_model->getTvFeatures($data_pass);
-	$data['bishop_details']				= $this->User_model->getBishopDetails();
+  	$data['home_slider']			= $this->User_model->get_home_sliders();
+	$data['cachereset'] 			= 1;
+	$data_pass   					= array();
+	$data_pass['limit']				= 10;
+	$data_pass['order_by'] 			= array('column'=>'id','value'=>'RANDOM');
+	$random_parish					= $this->User_model->getParishs($data_pass);
+	$data['randoam_parish']   		= $random_parish; 
+	$data_pass   					= array();
+	$data_pass['limit']				= 10;
+	$data_pass['order_by'] 			= array('column'=>'id','value'=>'RANDOM');
+	$getPriests						= $this->User_model->getPriests($data_pass);
+	$data['getPriests']   			= $getPriests; 
+	$data_pass   					= array();
+	$data_pass['limit']				= 10;
+	$data_pass['order_by'] 			= array('column'=>'id','value'=>'RANDOM');
+	$data['randoam_commission']		= $this->User_model->getCommRand($data_pass);
+	$data_pass   					= array();
+	$data_pass['limit']				= 10;
+	$data_pass['order_by'] 			= array('column'=>'id','value'=>'RANDOM');
+	$data['feature_posts']			= $this->User_model->getPostFeatures($data_pass);
+	$data_pass   					= array();
+	$data_pass['limit']				= 10;
+	$data_pass['order_by'] 			= array('column'=>'tvID','value'=>'RANDOM');
+	$data['media_posts']			= $this->User_model->getTvFeatures($data_pass);
+	$data['bishop_details']			= $this->User_model->getBishopDetails();
+	$data['parish_list']			= $this->User_model->getParishs($data_pass);
 			
 	if($this->input->is_ajax_request())
 			{

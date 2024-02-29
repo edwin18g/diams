@@ -12,7 +12,7 @@ if(empty($pageName)){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuzhithurai Diocese</title>
     <!-- Favicon img -->
-    <link rel="shortcut icon" href="/themes/frontend/assets/images/favicon.png">
+    <link rel="shortcut icon" href="/images/logo.png">
     <!-- Bootstarp min css -->
     <link rel="stylesheet" href="/themes/frontend/assets/css/bootstrap.min.css">
     <!-- Mean menu css -->

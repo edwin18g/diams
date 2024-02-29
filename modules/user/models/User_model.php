@@ -133,6 +133,29 @@ class User_model extends CI_Model
 			return false;
 		}
 	}
+	function getPriests($data = array())
+	{
+		$limit 				= ($data['limit'])?$data['limit']:false;
+		$order_by     = ($data['order_by'])?$data['order_by']:false;
+		
+		if($limit)
+		{
+			$this->db->limit($limit);
+		}
+		if($order_by)
+		{
+			$this->db->order_by($order_by['column'], $order_by['value']);
+		}
+		$query = $this->db->get('users');
+		if($query->num_rows() > 0)
+		{
+			return $query->result_array();
+		}
+		else
+		{
+			return false;
+		}
+	}
 	
 	
 		function getTvFeatures($data = array())
