@@ -8,58 +8,58 @@ class Onlinetracker{
 	public function __construct()
 	{
 		$this->ip = $_SERVER['REMOTE_ADDR'];
-		$this->data = @unserialize(file_get_contents($this->file));
-		$aryData = $this->data['useronline'];
-		if(!$this->data) $this->data = array();
-		$timeout = time()-120;
+		// $this->data = @unserialize(file_get_contents($this->file));
+		// $aryData = $this->data['useronline'];
+		// if(!$this->data) $this->data = array();
+		// $timeout = time()-120;
 		
 		//Removes expired data			
-		foreach($aryData as $key => $value){
-			if($value['time'] <= $timeout) {
-				if($value['username']) {
-					$this->data['memonline']--; 
-				}
-				else $this->data['guestonline']--;
-				unset($aryData[$key]);
-			}
-		}
+		// foreach($aryData as $key => $value){
+		// 	if($value['time'] <= $timeout) {
+		// 		if($value['username']) {
+		// 			$this->data['memonline']--; 
+		// 		}
+		// 		else $this->data['guestonline']--;
+		// 		unset($aryData[$key]);
+		// 	}
+		// }
 
 		//If it's the first hit, add the information to database
-		if(!isset($aryData[$this->ip])){
-			$CI =& get_instance();
-			$aryData[$this->ip]['time'] = time();
-			$aryData[$this->ip]['uri'] = $_SERVER['REQUEST_URI'];
+		// if(!isset($aryData[$this->ip])){
+		// 	$CI =& get_instance();
+		// 	$aryData[$this->ip]['time'] = time();
+		// 	$aryData[$this->ip]['uri'] = $_SERVER['REQUEST_URI'];
 			
-			$username = $CI->session->userdata('username');
-			$aryData[$this->ip]['username'] = $username;
+		// 	$username = $CI->session->userdata('username');
+		// 	$aryData[$this->ip]['username'] = $username;
 			
-			if($username) {
-				$this->data['memonline']++;
-			}
-			else {
-				$this->data['guestonline']++;
-			}
+		// 	if($username) {
+		// 		$this->data['memonline']++;
+		// 	}
+		// 	else {
+		// 		$this->data['guestonline']++;
+		// 	}
 
-			$this->data['totalvisit']++;
+		// 	$this->data['totalvisit']++;
 			
-			//Loads the USER_AGENT class if it's not loaded yet
-			$class_loaded = null;
-			if(!isset($CI->agent)) { $CI->load->library('user_agent'); $class_loaded = true; }
-			if($CI->agent->is_robot())
-				$aryData[$this->ip]['bot'] = $CI->agent->robot();
-			else
-				$aryData[$this->ip]['bot'] = false;
+		// 	//Loads the USER_AGENT class if it's not loaded yet
+		// 	$class_loaded = null;
+		// 	if(!isset($CI->agent)) { $CI->load->library('user_agent'); $class_loaded = true; }
+		// 	if($CI->agent->is_robot())
+		// 		$aryData[$this->ip]['bot'] = $CI->agent->robot();
+		// 	else
+		// 		$aryData[$this->ip]['bot'] = false;
 			
-			//Destroys the USER_AGENT class so it can be loaded again on the controller
-			if($class_loaded) unset($class_loaded, $CI->agent);
-		}
-		else {
-			$aryData[$this->ip]['time'] = time();
-			$aryData[$this->ip]['uri'] = $_SERVER['REQUEST_URI'];
-		}
+		// 	//Destroys the USER_AGENT class so it can be loaded again on the controller
+		// 	if($class_loaded) unset($class_loaded, $CI->agent);
+		// }
+		// else {
+		// 	$aryData[$this->ip]['time'] = time();
+		// 	$aryData[$this->ip]['uri'] = $_SERVER['REQUEST_URI'];
+		// }
 		
-		$this->data['useronline'] = $aryData;
-		$this->_save();
+		// $this->data['useronline'] = $aryData;
+		// $this->_save();
 	}
 	
 	//this function return the total number of online users
@@ -126,10 +126,10 @@ class Onlinetracker{
 	//Save current data into file
 	function _save()
 	{
-		$fp = fopen($this->file,'w');
-		flock($fp, LOCK_EX);
-		$write = fwrite($fp, serialize($this->data));
-		fclose($fp);
-		return $write;
+		// $fp = fopen($this->file,'w');
+		// flock($fp, LOCK_EX);
+		// $write = fwrite($fp, serialize($this->data));
+		// fclose($fp);
+		return true;
 	}
 }

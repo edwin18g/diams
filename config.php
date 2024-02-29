@@ -11,7 +11,7 @@ if($_SERVER['HTTP_HOST'] == 'dio.local')
 {
 	define('HOSTNAME', 'localhost');
 	define('USERNAME', 'root');
-	define('PASSWORD', 'root');
+	define('PASSWORD', 'Root@123');
 	define('DATABASE', 'dio');
 }else
 {

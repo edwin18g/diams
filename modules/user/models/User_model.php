@@ -405,5 +405,14 @@ class User_model extends CI_Model
         return $this->db->delete('administration');
 	}
 
+	function getBishopDetails(){
+		$this->db->select('administration.*, users.*');
+		$this->db->join('users', 'administration.a_user_id = users.userID', 'inner');
+		$this->db->where('administration.a_type', 1);
+		$query = $this->db->get('administration');
+		return $query->result_array();
+	}
+	
+
 	
 }

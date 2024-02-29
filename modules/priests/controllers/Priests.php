@@ -156,7 +156,9 @@ class Priests extends CI_Controller
 			}
 			else
 			{
-				$this->template->build('priests', $data);
+				// $this->template->build('priests', $data);
+				$data['pageName'] = 'priests';
+				$this->load->view('user/frontend_layout', $data);
 			}
 		}
 	}
