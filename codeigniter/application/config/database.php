@@ -94,6 +94,9 @@ $db['default']		= array(
 	'failover' 		=> array(),
 	'save_queries' 	=> TRUE
 );
+echo "<pre>";
+print_r($db['default']);
+die;
 /*
 [hostname] => sql211.epizy.com
 [username] => epiz_21887212
