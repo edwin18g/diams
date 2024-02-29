@@ -44,10 +44,20 @@
   100% { transform: rotate(360deg); }
 }
 </style>
-	<div class="page-name-block" >
-		<div class=" ">
-		<span class="Page-title">Parish <i class="fa fa-angle-double-right"></i></span>
-		<input type="text" class="form-control serach-btn"  onkeyup="searchkey(this.value)" name="query" placeholder="<?php echo 'Search Parish'//echo phrase('search_user'); ?>"<?php echo ($keywords != null ? ' value="' . $keywords . '"' : 'test'); ?> />
+<main>
+<section class="banner__inner-page bg-image pt-160 pb-160 bg-image" data-background="/themes/frontend/assets/images/banner/banner-inner-page.jpg" style="background-image: url(&quot;assets/images/banner/banner-inner-page.jpg&quot;);">
+            <div class="container">
+                <div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 200ms; animation-name: fadeInUp;">
+                    <a href="/">Home</a><span><i class="fa-regular fa-angles-right mx-2"></i>Parish</span>
+                </div>
+            </div>
+        </section>
+<section class="cause-area pt-120 pb-120">
+            <div class="container">
+			
+		<div class="d-flex p-1">
+		
+			<input type="text" class="form-control serach-btn"  onkeyup="searchkey(this.value)" name="query" placeholder="<?php echo 'Search Parish'//echo phrase('search_user'); ?>"<?php echo ($keywords != null ? ' value="' . $keywords . '"' : 'test'); ?> />
 			
   
  
@@ -63,28 +73,18 @@
 	
 				
 		</div>
-	</div>
-	<br /><br /><br />
+	
+                <div class="row g-4" id="parish_li">
+                    
+                  
+                </div>
+                
+            </div>
+        </section>
+	
+		</main>
 	
 	
-	
-	<div class="container">
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
-				<?php if($keywords): ?>
-				<br />
-				<div class="alert alert-<?php echo ($count > 0 ? 'info' : 'danger'); ?>"><?php echo phrase('showing'); ?> <b><?php echo $offset . ' - ' . ($count > $limit && $limit+$offset < $count ? $limit+$offset : $count) . ' ' . phrase('from') . ' ' . ($count > 0 ? $count : 0); ?></b> <?php echo phrase('results_for_keywords'); ?> <b>"<?php echo $keywords; ?>"</b></div>
-				<?php endif; ?>
-			
-					<div id="parish_li" class="row ">
-				<div class="loader"></div>
-					</div>
-			
-				
-			
-			</div>
-		</div>
-	</div>
 	
 	<script>
 	var admin_url   = '<?php echo base_url()?>';

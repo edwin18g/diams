@@ -209,10 +209,14 @@
                             <div class="swiper-slide">                       
                                 <div class="cause__item">
                                     <div class="cause__image image">
-                                        <img src="/themes/frontend/assets/images/cause/cause-image2.jpg" alt="image">
+                                        <img src="<?=base_url('uploads/parish/' . imageCheck('parish', $value['cimg']))?>" alt="image" style="
+								height: 200px;
+								width: 100%;
+								object-fit: cover;
+							">
                                     </div>
                                     <div class="cause__content">
-                                        <h4 class="mb-4 mt-20"><a href="cause-single.html" class="primary-hover"><?php echo $value['cname'] ?></a></h4> 
+                                        <h4 class="mb-4 mt-20"><a href="<?=base_url($value['slug'])?>" class="primary-hover"><?php echo $value['cname'] ?></a></h4> 
                                         <div class="progress-area">
                                             <div class="progress__item">
                                                 <div class="progress__content" style="width: 100%;"></div>
@@ -220,7 +224,7 @@
                                             <div class="btn-three mt-30">
                                                 <span class="btn-circle">
                                                 </span>
-                                                <a href="cause-single.html" class="btn-inner">
+                                                <a href="<?=base_url($value['slug'])?>" class="btn-inner">
                                                     <span class="btn-text">
                                                     View More
                                                     </span>

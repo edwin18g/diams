@@ -102,22 +102,37 @@ class Parish extends CI_Controller
 						else
 						{
 					$htmlData .='
-							<div class="col-sm-4 col-xs-6">
+					<div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                        <div class="cause__item">
+                            <div class="cause__image image">
+                                <img src="'.base_url('uploads/parish/' . imageCheck('parish', $row['cimg'])) .'" alt="image" style="
+								height: 200px;
+								width: 100%;
+								object-fit: cover;
+							">
+                                
+                            </div>
+                            <div class="cause__content">
+                                <h4 class="mb-4 mt-20"><a href="'.base_url($row['slug']).'" class="primary-hover">'.$row['cname'].'</a></h4>
+                                <div class="progress-area">
+                                    <div class="progress__item">
+                                        <div class="progress__content" style="width: 100%;"></div>
+                                    </div>
+                                   
+                                    <div class="btn-three mt-30">
+                                        <span class="btn-circle desplode-circle" style="left: 254px; top: 57.125px;">
+                                        </span>
+                                        <a href="cause-single.html" class="btn-inner">
+                                            <span class="btn-text">
+                                                View More
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 							
-								<a href="'.base_url($row['slug']).'" class="">
-					<div class="col-sm-12 card-item">
-         		<div class="card ">
-            		<img class="card-img-parish" src="'.base_url('uploads/parish/' . imageCheck('parish', $row['cimg'])) .'" alt="Card image cap">
-            		<div class="card-body">
-               		<h5 class="card-title card-warp">'.$row['cname'].'</h5>
-               	
-               	
-            		</div>
-         		</div>
-      		</div>
-      		</a>
-								
-							</div>
 						';			
 						}
 			
@@ -226,7 +241,9 @@ class Parish extends CI_Controller
 							);
 				
 				$data['remainRecord']		= $remainRecord;
-				$this->template->build('parish_list', $data);
+				// $this->template->build('parish_list', $data);
+				$data['pageName'] = 'parish_list';
+				$this->load->view('user/frontend_layout', $data);
 				
 			}
 
