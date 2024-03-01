@@ -146,7 +146,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	 * @param	string	$session_id	Session ID
 	 * @return	string	Serialized session data
 	 */
-	public function read($session_id)
+	public function read($session_id):string
 	{
 		if ($this->_get_lock($session_id) !== FALSE)
 		{
@@ -275,7 +275,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	 *
 	 * @return	bool
 	 */
-	public function close()
+	public function close():bool
 	{
 		return ($this->_lock && ! $this->_release_lock())
 			? $this->_fail()
