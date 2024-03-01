@@ -330,7 +330,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	 * @param	int 	$maxlifetime	Maximum lifetime of sessions
 	 * @return	bool
 	 */
-	public function gc($maxlifetime):bool
+	public function gc($maxlifetime):int
 	{
 		// Prevent previous QB calls from messing with our queries
 		$this->_db->reset_query();
