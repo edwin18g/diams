@@ -203,7 +203,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	 * @param	string	$session_data	Serialized session data
 	 * @return	bool
 	 */
-	public function write($session_id, $session_data)
+	public function write($session_id, $session_data):bool
 	{
 		// Prevent previous QB calls from messing with our queries
 		$this->_db->reset_query();
@@ -292,7 +292,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	 * @param	string	$session_id	Session ID
 	 * @return	bool
 	 */
-	public function destroy($session_id)
+	public function destroy($session_id):bool
 	{
 		if ($this->_lock)
 		{
@@ -330,7 +330,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	 * @param	int 	$maxlifetime	Maximum lifetime of sessions
 	 * @return	bool
 	 */
-	public function gc($maxlifetime)
+	public function gc($maxlifetime):bool
 	{
 		// Prevent previous QB calls from messing with our queries
 		$this->_db->reset_query();
