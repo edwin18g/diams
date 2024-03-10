@@ -32,6 +32,8 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Frontend::index');
+$routes->get('parish', 'Frontend::parish');
+
 
 //custom routing for custom pages
 //this route will move 'about/any-text' to 'domain.com/about/index/any-text'

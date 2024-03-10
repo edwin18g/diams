@@ -15,10 +15,21 @@ class Frontend extends App_Controller {
 
     public function index() {
 
-        $pagename = view('home');
+        $pagename ='home';
         // die('k');
+     
         return view('frontend_layout', ['pageName'=>$pagename]);
     }
+
+    public function parish() {
+        $parishList = $this->Clients_model->get_details()->getResultArray();
+
+  
+        $pagename = 'parish';//view('parish');
+        // die('k');
+        return view('frontend_layout', ['pageName'=>$pagename,'parishList'=>$parishList]);
+    }
+
 
     private function _check_widgets_permissions() {
         if ($this->login_user->user_type === "staff" && $this->show_staff_on_staff) {

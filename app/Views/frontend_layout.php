@@ -143,7 +143,7 @@ if(empty($pageName)){
 
     <main>
     <?php if(!empty($pageName)){
-   echo $pageName;
+   echo view($pageName);
   }else{
 
     echo "page missing";

@@ -1354,7 +1354,6 @@ class Dashboard extends Security_Controller {
 
     function migration() {
 
-        // ALTER TABLE `_clients` ADD `cimg` VARCHAR(256) NULL DEFAULT NULL AFTER `disable_online_payment`;
         
         $parish = array(
             array('id' => '99','churchid' => '1001','cimg' => '1001.jpg','chistory' => '     ','cname' => 'Alavnvilai','psaint' => 'St Aloysius Gonsaga','estd' => '1778St. Aloysius Gon','substation' => '      St. Michael Church,Kuzhivilai. St. Antony Church,Nullivilai.','institution' => '              St.Aloysius Higher Secondary School','anbiyam' => 'Parish Council,Finance Council','pious' => '              Little Way Association,YCS,Youth,Women Movement,CLC,Vincent De Paul Society,Franciscan 3rd Association,Catholic Action Society,Legion of Mary,KAIGAL','families' => '','population' => '','website' => '','address' => '        Karenkadu post','telephone' => '','sgroups' => '              ','pemail' => '','type' => 'Parish','slug' => 'alavnvilai','access_user' => NULL),
@@ -1473,6 +1472,8 @@ class Dashboard extends Security_Controller {
 
             $arrayBatch = [];
 
+            $qry = 'ALTER TABLE `_clients` ADD `cimg` VARCHAR(256) NULL DEFAULT NULL AFTER `disable_online_payment`';
+            $this->db->query($qry);
             foreach ($parish as $key => $paris_one) 
             {
                 $arrayBatch[] = ['company_name'=>$paris_one['cname'],'type'=> ($paris_one['type'] == 'Shrine')?'organization':'person', 'address'=>$paris_one['address'],'cimg'=>$paris_one['cimg']];
