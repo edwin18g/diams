@@ -107,10 +107,10 @@ $lang["no_posts_to_show"] = "No posts to show";
 
 /* team_member */
 $lang["add_team_member"] = "Add member";
-$lang["edit_team_member"] = "Edit team member";
-$lang["delete_team_member"] = "Delete team member";
-$lang["team_member"] = "Team member";
-$lang["team_members"] = "Team members";
+$lang["edit_team_member"] = "Edit priest member";
+$lang["delete_team_member"] = "Delete priest member";
+$lang["team_member"] = "Priest member";
+$lang["team_members"] = "Priest members";
 $lang["active_members"] = "Active members";
 $lang["inactive_members"] = "Inactive members";
 $lang["first_name"] = "First name";
@@ -141,14 +141,14 @@ $lang["my_profile"] = "My Profile";
 $lang["change_password"] = "Change Password";
 $lang["social_links"] = "Social Links";
 $lang["view_details"] = "View Details";
-$lang["invite_someone_to_join_as_a_team_member"] = "Invite someone to join as a team member.";
+$lang["invite_someone_to_join_as_a_team_member"] = "Invite someone to join as a priest member.";
 
 /* team */
-$lang["add_team"] = "Add team";
-$lang["edit_team"] = "Edit team";
-$lang["delete_team"] = "Delete team";
-$lang["team"] = "Team";
-$lang["select_a_team"] = "Select a team";
+$lang["add_team"] = "Add priest";
+$lang["edit_team"] = "Edit priest";
+$lang["delete_team"] = "Delete priest";
+$lang["team"] = "Priest";
+$lang["select_a_team"] = "Select a priest";
 
 /* dashboard */
 $lang["dashboard"] = "Dashboard";
@@ -227,7 +227,7 @@ $lang["edit_announcement"] = "Edit announcement";
 $lang["delete_announcement"] = "Delete announcement";
 $lang["announcement"] = "Announcement";
 $lang["announcements"] = "Announcements";
-$lang["all_team_members"] = "All team members";
+$lang["all_team_members"] = "All priest members";
 $lang["all_team_clients"] = "All parishes";
 
 /* settings */
@@ -287,7 +287,7 @@ $lang["account_created"] = "Your account has been created successfully!";
 $lang["invitation_expaired_message"] = "The invitation has expired or something went wrong";
 $lang["account_already_exists_for_your_mail"] = "Account already exists for your email address.";
 $lang["create_an_account_as_a_new_client"] = "Create an account as a new parish.";
-$lang["create_an_account_as_a_team_member"] = "Create an account as a team member.";
+$lang["create_an_account_as_a_team_member"] = "Create an account as a priest member.";
 $lang["create_an_account_as_a_client_contact"] = "Create an account as a parish contact.";
 
 /* messages */
@@ -546,7 +546,7 @@ $lang["restore_to_default"] = "Restore to default";
 $lang["template_restored"] = "The template has been restored to default.";
 $lang["login_info"] = "Login info";
 $lang["reset_password"] = "Reset password";
-$lang["team_member_invitation"] = "Team member invitation";
+$lang["team_member_invitation"] = "Team priest invitation";
 $lang["client_contact_invitation"] = "Parish contact invitation";
 $lang["send_invoice"] = "Send invoice";
 $lang["signature"] = "Signature";
@@ -561,18 +561,18 @@ $lang["delete_role"] = "Delete role";
 $lang["use_seetings_from"] = "Use settings from";
 $lang["permissions"] = "Permissions";
 $lang["yes_all_members"] = "Yes, all members";
-$lang["yes_specific_members_or_teams"] = "Yes, specific members or teams";
+$lang["yes_specific_members_or_teams"] = "Yes, specific members or priests";
 $lang["yes_specific_ticket_types"] = "Yes, specific ticket types";
 $lang["select_a_role"] = "Select a role";
-$lang["choose_members_and_or_teams"] = "Choose members and / or teams";
+$lang["choose_members_and_or_teams"] = "Choose members and / or priests";
 $lang["choose_ticket_types"] = "Choose ticket types";
 $lang["excluding_his_her_time_cards"] = "Excluding his/her own time cards";
 $lang["excluding_his_her_leaves"] = "Excluding his/her own leaves";
-$lang["can_manage_team_members_leave"] = "Can manage team member's leaves?";
-$lang["can_manage_team_members_timecards"] = "Can manage team member's time cards?";
+$lang["can_manage_team_members_leave"] = "Can manage priest member's leaves?";
+$lang["can_manage_team_members_timecards"] = "Can manage priest member's time cards?";
 $lang["can_access_invoices"] = "Can access invoices?";
 $lang["can_access_expenses"] = "Can access expenses?";
-$lang["can_access_clients_information"] = "Can access parish's information?";
+$lang["can_access_clients_information"] = "Can access parishes information?";
 $lang["can_access_tickets"] = "Can access tickets?";
 $lang["can_manage_announcements"] = "Can manage announcements?";
 
@@ -610,7 +610,7 @@ $lang["invoice_footer"] = "Invoice Footer";
 $lang["invoice_preview"] = "Invoice Preview";
 $lang["close_preview"] = "Close Preview";
 $lang["only_me"] = "Only me";
-$lang["specific_members_and_teams"] = "Specific members and teams";
+$lang["specific_members_and_teams"] = "Specific members and priests";
 $lang["rows_per_page"] = "Rows per page";
 $lang["price"] = "Price";
 $lang["security_type"] = "Security Type";
@@ -735,9 +735,9 @@ $lang["client_can_add_project_files"] = "parish can add project files?";
 $lang["client_can_comment_on_files"] = "parish can comment on files?";
 $lang["mark_invoice_as_not_paid"] = "Mark as Not paid"; //Change invoice status to Not Paid
 
-$lang["set_team_members_permission"] = "Set team members permissions";
-$lang["can_view_team_members_contact_info"] = "Can view team member's contact info?";
-$lang["can_view_team_members_social_links"] = "Can view team member's social links?";
+$lang["set_team_members_permission"] = "Set priest members permissions";
+$lang["can_view_team_members_contact_info"] = "Can view priest member's contact info?";
+$lang["can_view_team_members_social_links"] = "Can view priest member's social links?";
 
 $lang["collaborator"] = "Collaborator";
 $lang["collaborators"] = "Collaborators";
@@ -890,8 +890,8 @@ $lang["group_by"] = "Group by";
 $lang["create_invoice"] = "Create Invoice";
 $lang["include_all_items_of_this_estimate"] = "Include all items of this estimate";
 $lang["edit_payment"] = "Edit payment";
-$lang["disable_client_login"] = "Disable client login";
-$lang["disable_client_signup"] = "Disable client signup";
+$lang["disable_client_login"] = "Disable parish login";
+$lang["disable_client_signup"] = "Disable parish signup";
 
 $lang["chart"] = "Chart";
 $lang["signin_page_background"] = "Signin page background";
@@ -908,11 +908,11 @@ $lang["enable_attachment"] = "Enable attachment";
 $lang["custom_fields"] = "Custom fields";
 $lang["edit_field"] = "Edit field";
 $lang["delete_field"] = "Delete field";
-$lang["client_info"] = "Client info";
+$lang["client_info"] = "Parish info";
 $lang["edit_expenses_category"] = "Edit expenses category";
 $lang["eelete_expenses_category"] = "Delete expenses category";
 $lang["empty_starred_projects"] = "To access your favorite projects quickly, please go to the project view and mark the star.";
-$lang["empty_starred_clients"] = "To access your favorite clients quickly, please go to the client view and mark the star.";
+$lang["empty_starred_clients"] = "To access your favorite clients quickly, please go to the parish view and mark the star.";
 $lang["download_zip_name"] = "documents";
 $lang["invoice_prefix"] = "Invoice prefix";
 $lang["invoice_style"] = "Invoice style";
@@ -931,11 +931,11 @@ $lang["notification_invoice_payment_confirmation"] = "Payment received";
 
 /* Version 1.7 */
 
-$lang["client_can_create_projects"] = "Client can create projects?";
-$lang["client_can_view_timesheet"] = "Client can view timesheet?";
-$lang["client_can_view_gantt"] = "Client can view gantt?";
-$lang["client_can_view_overview"] = "Client can view project overview?";
-$lang["client_can_view_milestones"] = "Client can view milestones?";
+$lang["client_can_create_projects"] = "Parish can create projects?";
+$lang["client_can_view_timesheet"] = "Parish can view timesheet?";
+$lang["client_can_view_gantt"] = "Parish can view gantt?";
+$lang["client_can_view_overview"] = "Parish can view project overview?";
+$lang["client_can_view_milestones"] = "Parish can view milestones?";
 
 $lang["items"] = "Items";
 $lang["edit_item"] = "Edit item";
@@ -964,7 +964,7 @@ $lang["field_type_number"] = "Number";
 $lang["show_in_table"] = "Show in table";
 $lang["show_in_invoice"] = "Show in invoice";
 $lang["visible_to_admins_only"] = "Visible to admins only";
-$lang["hide_from_clients"] = "Hide from clients";
+$lang["hide_from_clients"] = "Hide from Parishes";
 $lang["public"] = "Public";
 
 $lang["help"] = "Help";
@@ -996,8 +996,8 @@ $lang["project_timesheet"] = "Project timesheet";
 
 $lang["set_event_permissions"] = "Set event permissions";
 $lang["disable_event_sharing"] = "Disable event sharing";
-$lang["can_update_team_members_general_info_and_social_links"] = "Can update team member's general info and social links?";
-$lang["can_manage_team_members_project_timesheet"] = "Can manage team member's project timesheet?";
+$lang["can_update_team_members_general_info_and_social_links"] = "Can update priest member's general info and social links?";
+$lang["can_manage_team_members_project_timesheet"] = "Can manage priest member's project timesheet?";
 
 $lang["cron_job"] = "Cron Job";
 $lang["cron_job_link"] = "Cron Job link";
@@ -1033,10 +1033,10 @@ $lang["add_a_todo"] = "Add a to do...";
 
 /* Version 1.9 */
 
-$lang["client_groups"] = "Client groups";
-$lang["add_client_group"] = "Add client group";
-$lang["edit_client_group"] = "Edit client group";
-$lang["delete_client_group"] = "Delete client group";
+$lang["client_groups"] = "Parish groups";
+$lang["add_client_group"] = "Add Parish group";
+$lang["edit_client_group"] = "Edit Parish group";
+$lang["delete_client_group"] = "Delete Parish group";
 
 $lang["ticket_prefix"] = "Ticket prefix";
 $lang["add_a_task"] = "Add a task...";
@@ -1054,7 +1054,7 @@ $lang["mark_project_as_hold"] = "Mark Project as Hold";
 
 $lang["repeat"] = "Repeat";
 
-$lang["hide_team_members_list"] = "Hide team members list?";
+$lang["hide_team_members_list"] = "Hide priest members list?";
 
 /* Version 2.0 */
 
@@ -1067,7 +1067,7 @@ $lang["notification_sound_volume"] = "Notification sound volume";
 
 $lang["project_reference_in_tickets"] = "Enable project reference";
 
-$lang["hide_menus_from_client_portal"] = "Hide menus from client portal";
+$lang["hide_menus_from_client_portal"] = "Hide menus from Parish portal";
 $lang["hidden_menus"] = "Hidden menus";
 
 $lang["new_announcement_created"] = "New announcement created";
@@ -1115,8 +1115,8 @@ $lang["confirm_event"] = "Confirm event";
 $lang["reject_event"] = "Reject event";
 $lang["event_status"] = "Event status";
 
-$lang["specific_client_contacts"] = "Specific client contacts";
-$lang["choose_client_contacts"] = "Choose client contacts";
+$lang["specific_client_contacts"] = "Specific Parish contacts";
+$lang["choose_client_contacts"] = "Choose parish contacts";
 $lang["invitations_sent"] = "The invitations has been sent.";
 
 /* Version 2.1 */
@@ -1162,10 +1162,10 @@ $lang["completed_projects"] = "Completed Projects";
 $lang["new_tickets"] = "New Tickets";
 $lang["closed_tickets"] = "Closed Tickets";
 
-$lang["clocked_in_team_members"] = "Clocked in team members";
-$lang["clocked_out_team_members"] = "Clocked out team members";
-$lang["latest_online_client_contacts"] = "Latest online client contacts";
-$lang["latest_online_team_members"] = "Latest online team members";
+$lang["clocked_in_team_members"] = "Clocked in priest members";
+$lang["clocked_out_team_members"] = "Clocked out priest members";
+$lang["latest_online_client_contacts"] = "Latest online parish contacts";
+$lang["latest_online_team_members"] = "Latest online priest members";
 $lang["my_tasks_list"] = "My tasks list";
 
 $lang["discount"] = "Discount";
@@ -1178,7 +1178,7 @@ $lang["after_tax"] = "After Tax";
 
 $lang["access_permission"] = "Access Permission";
 $lang["setup"] = "Setup";
-$lang["client_permissions"] = "Client permissions";
+$lang["client_permissions"] = "Parish permissions";
 
 $lang["invoice_over_payment_error_message"] = "You can't pay more than your invoice due.";
 $lang["account_already_exists_for_your_company_name"] = "Account already exists for your company name.";
@@ -1213,7 +1213,7 @@ $lang["add_project_time"] = "Add project time";
 $lang["add_to_do"] = "Add to do";
 $lang["hide_menus_from_topbar"] = "Hide menus from topbar";
 $lang["favorite_projects"] = "Favorite projects";
-$lang["favorite_clients"] = "Favorite clients";
+$lang["favorite_clients"] = "Favorite parish";
 $lang["dashboard_customization"] = "Dashboard customization";
 $lang["quick_add"] = "Quick add";
 
@@ -1230,8 +1230,8 @@ $lang["marked_all_notifications_as_read"] = "Marked all notifications as read";
 $lang["project_completed"] = "Project completed";
 $lang["notification_project_completed"] = "Completed a project";
 
-$lang["google_drive_client_id"] = "Client ID";
-$lang["google_drive_client_secret"] = "Client secret";
+$lang["google_drive_client_id"] = "Parish ID";
+$lang["google_drive_client_secret"] = "Parish secret";
 $lang["get_your_app_credentials_from_here"] = "Get your app credentials from here:";
 $lang["remember_to_add_this_url_in_authorized_redirect_uri"] = "Remember to add this url in Authorized redirect uri";
 $lang["save_and_authorize"] = "Save & authorize";
@@ -1260,7 +1260,7 @@ $lang["enable_push_notification"] = "Enable push notification";
 $lang["push_notification"] = "Push notification";
 $lang["disable_push_notification"] = "Disable push notification";
 
-$lang["unknown_client"] = "Unknown client";
+$lang["unknown_client"] = "Unknown parish";
 
 $lang["income_expenses_widget_help_message"] = "This report is only usable if you are using single currency.";
 
@@ -1285,7 +1285,7 @@ $lang["imap_help_message_1"] = "You can setup an email address to create the tic
 $lang["imap_help_message_2"] = "Please note that, the system will create tickets based on the unread emails. After creating the ticket, the emails will be marked as read. To get the replies in the same tickets, the system will check the ticket ID in the email subject. If there is no ticket ID in the subject, that will be considered as a new ticket. You can setup the email subject from the";
 $lang["imap_error_credentials_message"] = "Error! Can't connect with the imap using the credentials.";
 
-$lang["client_message_own_contacts"] = "Client can send/receive message to/from own contacts?";
+$lang["client_message_own_contacts"] = "Parish can send/receive message to/from own contacts?";
 
 $lang["print_invoice"] = "Print invoice";
 
@@ -1301,7 +1301,7 @@ $lang["notification_test_push_notification"] = "It's a demo push notification";
 $lang["push_notification_error_message"] = "Error! Can't connect with the Pusher using the credentials.";
 $lang["clone_estimate"] = "Clone Estimate";
 
-$lang["import_clients"] = "Import clients";
+$lang["import_clients"] = "Import Parishes";
 $lang["download_sample_file"] = "Download sample file";
 
 $lang["estimate_settings"] = "Estimate Settings";
@@ -1310,9 +1310,9 @@ $lang["estimate_color"] = "Estimate Color";
 $lang["initial_number_of_the_estimate"] = "Initial number of the estimate";
 $lang["the_estimates_id_must_be_larger_then_last_estimate_id"] = "The estimates ID must be larger then last estimate ID.";
 
-$lang["send_to_client"] = "Send to client";
+$lang["send_to_client"] = "Send to parish";
 $lang["estimate_sent_message"] = "The estimate has been sent!";
-$lang["send_estimate_bcc_to"] = "When sending estimate to client, send BCC to";
+$lang["send_estimate_bcc_to"] = "When sending estimate to parish, send BCC to";
 
 $lang["task_settings"] = "Task settings";
 $lang["enable_recurring_option_for_tasks"] = "Enable recurring option for tasks";
@@ -1325,8 +1325,8 @@ $lang["add_lead_status"] = "Add lead status";
 $lang["edit_lead_status"] = "Edit lead status";
 $lang["delete_lead_status"] = "Delete lead status";
 $lang["owner"] = "Owner";
-$lang["make_client"] = "Make client";
-$lang["client_contacts"] = "Client contacts";
+$lang["make_client"] = "Make parish";
+$lang["client_contacts"] = "Parish contacts";
 $lang["lead_contacts"] = "Lead contacts";
 $lang["add_a_lead"] = "Add a lead";
 $lang["source"] = "Source";
@@ -1340,8 +1340,8 @@ $lang["do_not_merge"] = "Do not merge";
 $lang["merge_custom_fields_help_message"] = "If there is any similar custom fields exists for %s, this values will be added to those. Otherwise, this will create new custom fields for %s and add values to those.";
 $lang["lead_created"] = "Lead created";
 $lang["notification_lead_created"] = "Created a new lead.";
-$lang["client_created_from_lead"] = "Client created from lead";
-$lang["notification_client_created_from_lead"] = "Converted a lead to client.";
+$lang["client_created_from_lead"] = "Parish created from lead";
+$lang["notification_client_created_from_lead"] = "Converted a lead to parish.";
 $lang["project_deadline"] = "Project deadline";
 $lang["task_deadline"] = "Task deadline";
 $lang["event_type"] = "Event type";
@@ -1353,7 +1353,7 @@ $lang["there_has_leads_with_this_status"] = "There has leads with this status";
 $lang["lead_created_at"] = "Lead created at";
 $lang["past_lead_information"] = "Past lead information";
 $lang["last_status"] = "Last status";
-$lang["migrated_to_client_at"] = "Migrated to client at";
+$lang["migrated_to_client_at"] = "Migrated to parish at";
 $lang["edit_estimate_form"] = "Edit estimate form";
 
 $lang["please_upload_a_excel_file"] = "Please upload a excel file.";
@@ -1361,8 +1361,8 @@ $lang["back"] = "Back";
 
 $lang["import_client_error_header"] = "There has an invalid header. The indicated field should be <b>%s</b>.";
 $lang["import_client_error_company_name_field_required"] = "Company name field is required.";
-$lang["import_client_error_contact_name"] = "Contact first name and last name is both required to add a client contact.";
-$lang["import_client_error_contact_email"] = "Contact email is required and should be unique to add a client contact.";
+$lang["import_client_error_contact_name"] = "Contact first name and last name is both required to add a parish contact.";
+$lang["import_client_error_contact_email"] = "Contact email is required and should be unique to add a parish contact.";
 $lang["error"] = "Error";
 $lang["contact_first_name"] = "Contact first name";
 $lang["contact_last_name"] = "Contact last name";
@@ -1385,7 +1385,7 @@ $lang["imap_extension_error_help_message"] = "You don't have IMAP extension in y
 $lang["initial_number_of_the_invoice"] = "Initial number of the invoice";
 $lang["the_invoices_id_must_be_larger_then_last_invoice_id"] = "The invoices ID must be larger then last invoice ID.";
 
-$lang["client_dashboard_help_message"] = "This will be the default dashboard for all clients. Please note that, the information you're seeing here in the widgets, isn't any actual infromation of clients.";
+$lang["client_dashboard_help_message"] = "This will be the default dashboard for all parishes. Please note that, the information you're seeing here in the widgets, isn't any actual infromation of parishes.";
 
 $lang["send_to_lead"] = "Send to lead";
 $lang["lead"] = "Lead";
@@ -1416,7 +1416,7 @@ $lang["note_details"] = "Note details";
 $lang["public_note_by"] = "Public note by";
 $lang["marked_as_public"] = "Marked as public";
 
-$lang["client_can_view_activity"] = "Client can view project activity";
+$lang["client_can_view_activity"] = "Parish can view project activity";
 
 $lang["event_settings"] = "Event settings";
 $lang["enable_google_calendar_api"] = "Enable Google calendar API";
@@ -1427,8 +1427,8 @@ $lang["calendar_id"] = "Calendar ID";
 $lang["now_every_user_can_integrate_with_their_google_calendar"] = "Now every user can integrate with their Google calendar.";
 $lang["calendar_ids_help_message"] = "You'll get your own calendar events always. This is for other special calendars (Like Holidays Calendar).";
 
-$lang["google_client_id"] = "Client ID";
-$lang["google_client_secret"] = "Client secret";
+$lang["google_client_id"] = "Parish ID";
+$lang["google_client_secret"] = "Parish secret";
 $lang["integrate_with_google_calendar"] = "Integrate with Google calendar";
 $lang["google_calendar_event"] = "Google Calendar event";
 
@@ -1451,14 +1451,14 @@ $lang["task_point_range"] = "Task point range";
 
 $lang["gdpr"] = "GDPR";
 $lang["enable_gdpr"] = "Enable GDPR";
-$lang["allow_clients_to_export_their_data"] = "Allow clients to export their data";
+$lang["allow_clients_to_export_their_data"] = "Allow parishes to export their data";
 $lang["export_my_data"] = "Export my data";
 
-$lang["clients_can_request_account_removal"] = "Clients can request account removal";
+$lang["clients_can_request_account_removal"] = "Parishes can request account removal";
 $lang["i_want_to_remove_my_account"] = "I want to remove my account";
-$lang["client_contact_requested_account_removal"] = "Client contact requested account removal";
+$lang["client_contact_requested_account_removal"] = "Parish contact requested account removal";
 $lang["notification_client_contact_requested_account_removal"] = "Requested account removal.";
-$lang["show_terms_and_conditions_in_client_signup_page"] = "Show Terms and Conditions in client signup page";
+$lang["show_terms_and_conditions_in_client_signup_page"] = "Show Terms and Conditions in Parish signup page";
 $lang["i_accept_the_terms_and_conditions"] = "I accept the";
 
 $lang["apply"] = "Apply";
@@ -1486,14 +1486,14 @@ $lang["dependency"] = "Dependency";
 
 $lang["estimate_request_settings"] = "Estimate request settings";
 $lang["hidden_client_fields_on_public_estimate_requests"] = "Hide fields from public estimate request forms";
-$lang["hidden_client_fields"] = "Hidden client fields";
+$lang["hidden_client_fields"] = "Hidden parish fields";
 
 $lang["account"] = "Account";
 $lang["common"] = "Common";
 
 $lang["tax_deducted_at_source"] = "TDS";
 $lang["auto_close_ticket_after"] = "Auto close ticket after"; //after x days
-$lang["disable_user_invitation_option_by_clients"] = "Disable user invitation option by clients";
+$lang["disable_user_invitation_option_by_clients"] = "Disable user invitation option by parishes";
 $lang["create_tickets_only_by_registered_emails"] = "Create tickets only by registered emails";
 $lang["icon"] = "Icon";
 $lang["help_articles"] = "Help articles";
@@ -1503,16 +1503,16 @@ $lang["knowledge_base_categories"] = "KB categories";
 
 $lang["rtl"] = "RTL";
 
-$lang["disable_editing_by_clients"] = "Disable editing by clients";
+$lang["disable_editing_by_clients"] = "Disable editing by Parishes";
 
 $lang["client_left_menu"] = "Left menu";
-$lang["left_menu_for_client"] = "Left menu for client";
-$lang["left_menu_setting_help_message_for_client"] = "This will be the default left menu for clients. Please note that, the menu items will be distributed as per client contact's permissions.";
+$lang["left_menu_for_client"] = "Left menu for parish";
+$lang["left_menu_setting_help_message_for_client"] = "This will be the default left menu for parishes. Please note that, the menu items will be distributed as per parish contact's permissions.";
 $lang["available_menu_items"] = "Available menu items";
 $lang["drag_and_drop_items_here"] = "Drag and drop items here";
 $lang["no_more_items_available"] = "No more items available";
 $lang["left_menu_preview_message"] = "Hit save button to see preview.";
-$lang["left_menu_setting_help_message"] = "This will be the default left menu for team members. Please note that, the menu items will be distributed as per user's permission.";
+$lang["left_menu_setting_help_message"] = "This will be the default left menu for priest members. Please note that, the menu items will be distributed as per user's permission.";
 
 $lang["draft_invoices"] = "Draft invoices";
 $lang["draft_invoices_total"] = "Draft Invoices Total";
@@ -1522,22 +1522,22 @@ $lang["gdpr_terms_and_conditions_link"] = "Terms and Conditions URL";
 $lang["gdpr_terms_and_conditions"] = "Terms and Conditions";
 $lang["removal_request_pending"] = "Removal Request Pending";
 
-$lang["client_access_files_help_message"] = "The files which are located in client details view in the Files tab.";
+$lang["client_access_files_help_message"] = "The files which are located in parish details view in the Files tab.";
 $lang["estimate_request_name_email_error_message"] = "Email can't be shown without first name and last name.";
 
 $lang["slug"] = "Slug";
 $lang["add_assignee"] = "Add assignee";
 
-$lang["client_can_pay_invoice_without_login"] = "Client can pay invoices without login";
+$lang["client_can_pay_invoice_without_login"] = "Parish can pay invoices without login";
 $lang["client_can_pay_invoice_without_login_help_message"] = "Please add the PUBLIC_PAY_INVOICE_URL in the invoice email notification template.";
 
-$lang["link_to_existing_client"] = "Link to existing client";
-$lang["link_to_new_client"] = "Link to new client";
+$lang["link_to_existing_client"] = "Link to existing parish";
+$lang["link_to_new_client"] = "Link to new parish";
 
-$lang["client_can_view_files"] = "Client can view files?";
-$lang["client_can_add_files"] = "Client can add files?";
-$lang["client_can_view_activity"] = "Client can view project activity?";
-$lang["client_can_edit_projects"] = "Client can edit projects?";
+$lang["client_can_view_files"] = "Parish can view files?";
+$lang["client_can_add_files"] = "Parish can add files?";
+$lang["client_can_view_activity"] = "Parish can view project activity?";
+$lang["client_can_edit_projects"] = "Parish can edit projects?";
 
 $lang["view_pdf"] = "View PDF";
 
@@ -1558,7 +1558,7 @@ $lang["url"] = "URL";
 $lang["show_theme_color_changer"] = "Show theme color changer";
 $lang["default_theme_color"] = "Default theme color";
 $lang["left_menu"] = "Left menu";
-$lang["client_assigned_contacts"] = "Assigned client contacts";
+$lang["client_assigned_contacts"] = "Assigned parish contacts";
 $lang["timesheet_settings"] = "Timesheet Settings";
 $lang["users_can_start_multiple_timers_at_a_time"] = "Users can start multiple timers at a time";
 
@@ -1584,7 +1584,7 @@ $lang["notification_bitbucket_push_received"] = "Bitbucket notification received
 $lang["hour_log_time_error_message"] = "Please input hour(s) in correct format.";
 $lang["set_message_permissions"] = "Set message permissions";
 $lang["cant_send_any_messages"] = "Can't send any messages";
-$lang["can_send_messages_to_specific_members_or_teams"] = "Can send messages to specific members or teams:";
+$lang["can_send_messages_to_specific_members_or_teams"] = "Can send messages to specific members or priests:";
 
 $lang["embed"] = "Embed";
 $lang["copy"] = "Copy";
@@ -1601,16 +1601,16 @@ $lang["tasks_kanban"] = "Tasks Kanban";
 $lang["set_project_tab_order"] = "Set project tab order";
 $lang["project_tab_order"] = "Project tab order";
 $lang["project_tab_order_help_message"] = "Please note that, this tabs will show as per user's permissions.";
-$lang["project_tab_order_help_message_of_client"] = "Please note that, this tabs will show as per client contact's permissions.";
+$lang["project_tab_order_help_message_of_client"] = "Please note that, this tabs will show as per parish contact's permissions.";
 $lang["client_projects"] = "Projects";
 
 $lang["ticket_assigned"] = "Ticket assigned";
 $lang["notification_ticket_assigned"] = "Assigned a ticket to %s";
 
-$lang["disable_access_favorite_project_option_for_clients"] = "Disable access favorite project option for clients";
-$lang["disable_editing_left_menu_by_clients"] = "Disable editing left menu by clients";
+$lang["disable_access_favorite_project_option_for_clients"] = "Disable access favorite project option for parishes";
+$lang["disable_editing_left_menu_by_clients"] = "Disable editing left menu by parishes";
 $lang["disable_topbar_menu_customization"] = "Disable topbar menu customization";
-$lang["disable_dashboard_customization_by_clients"] = "Disable dashboard customization by clients";
+$lang["disable_dashboard_customization_by_clients"] = "Disable dashboard customization by parishes";
 
 $lang["task_start_date"] = "Task start date";
 $lang["project_start_date"] = "Project start date";
@@ -1622,12 +1622,12 @@ $lang["expense_details"] = "Expense details";
 $lang["read_only"] = "Read only";
 
 $lang["internal_use_only"] = "Internal use only";
-$lang["visible_to_team_members_only"] = "Visible to team members only";
-$lang["visible_to_clients_only"] = "Visible to clients only";
+$lang["visible_to_team_members_only"] = "Visible to priest members only";
+$lang["visible_to_clients_only"] = "Visible to parishes only";
 
 $lang["open_in_new_tab"] = "Open in new tab";
 
-$lang["client_can_delete_own_files_in_project"] = "Client can delete own files in project";
+$lang["client_can_delete_own_files_in_project"] = "Parish can delete own files in project";
 
 $lang["enable_slack"] = "Enable slack";
 $lang["get_the_webhook_url_of_your_app_from_here"] = "Get the Webhook URL of your App from here:";
@@ -1652,7 +1652,7 @@ $lang["github_push_received"] = "GitHub notification received";
 $lang["notification_github_push_received"] = "GitHub notification received.";
 
 $lang["invalid_calendar_id_error_message"] = "This Calendar ID isn't valid or you don't have permission to access this Calendar";
-$lang["total_clients"] = "Total clients";
+$lang["total_clients"] = "Total parishes";
 $lang["total_contacts"] = "Total contacts";
 
 $lang["message_sending_error_message"] = "This user doesn't have permission to send message to you. That's why you also can't send message!";
@@ -1667,8 +1667,8 @@ $lang["started"] = "Started";
 
 $lang["weekends"] = "Weekends";
 
-$lang["invited_client_contact_signed_up"] = "Invited client contact signed up";
-$lang["notification_invited_client_contact_signed_up"] = "Invited client contact signed up.";
+$lang["invited_client_contact_signed_up"] = "Invited parish contact signed up";
+$lang["notification_invited_client_contact_signed_up"] = "Invited parish contact signed up.";
 
 $lang["ticket_templates"] = "Ticket templates";
 $lang["ticket_template"] = "Ticket template";
@@ -1684,7 +1684,7 @@ $lang["create_new_projects_automatically_when_estimates_gets_accepted"] = "Creat
 
 $lang["typing"] = "Typing";
 
-$lang["new_client_greetings"] = "New client greetings";
+$lang["new_client_greetings"] = "New parish greetings";
 
 $lang["timeline_post_commented"] = "Timeline post commented";
 $lang["post_creator"] = "Post creator";
@@ -1692,9 +1692,9 @@ $lang["notification_timeline_post_commented"] = "Commented on a post.";
 $lang["created_a_new_post"] = "Created a new post";
 $lang["notification_created_a_new_post"] = "Created a new post.";
 
-$lang["verify_email_before_client_signup"] = "Verify email before client signup";
+$lang["verify_email_before_client_signup"] = "Verify email before parish signup";
 $lang["input_your_email"] = "Input your email";
-$lang["verify_email"] = "Client email verification";
+$lang["verify_email"] = "Parish email verification";
 $lang["please_continue_your_signup_process"] = "Please continue your signup process.";
 $lang["get_started"] = "Get Started";
 
@@ -1724,8 +1724,8 @@ $lang["please_upload_valid_image_files"] = "Please upload valid image files.";
 $lang["upload_image"] = "Upload Image";
 $lang["item_details"] = "Item details";
 $lang["item_image_sorting_help_message"] = "First image will be the default image.";
-$lang["show_in_client_portal"] = "Show in client portal";
-$lang["showing_in_client_portal"] = "Showing in client portal";
+$lang["show_in_client_portal"] = "Show in parish portal";
+$lang["showing_in_client_portal"] = "Showing in parish portal";
 $lang["add_to_cart"] = "Add to cart";
 $lang["item_empty_message"] = "No items found!";
 
@@ -1736,7 +1736,7 @@ $lang["process_order"] = "Process Order";
 $lang["place_order"] = "Place order";
 $lang["edit_item"] = "Edit item";
 $lang["store"] = "Store";
-$lang["client_can_access_store"] = "Client can access store?";
+$lang["client_can_access_store"] = "Parish can access store?";
 $lang["added_to_cart"] = "Added to cart";
 $lang["can_access_orders"] = "Can access orders?";
 
@@ -1781,8 +1781,8 @@ $lang["add_more_items"] = "Add more items";
 $lang["yes_only_own_leads"] = "Yes, only own leads";
 $lang["yes_all_leads"] = "Yes, all leads";
 
-$lang["yes_only_own_clients"] = "Yes, only own clients";
-$lang["yes_all_clients"] = "Yes, all clients";
+$lang["yes_only_own_clients"] = "Yes, only own parishes";
+$lang["yes_all_clients"] = "Yes, all parishes";
 
 $lang["recently_updated"] = "Recently updated";
 $lang["recently_moved_to"] = "Recently moved to";
@@ -1861,7 +1861,7 @@ $lang["proposal_to"] = "Proposal to";
 $lang["proposal_settings"] = "Proposal settings";
 $lang["proposal_prefix"] = "Proposal prefix";
 $lang["proposal_color"] = "Proposal color";
-$lang["send_proposal_bcc_to"] = "When sending proposal to client, send BCC to";
+$lang["send_proposal_bcc_to"] = "When sending proposal to parish, send BCC to";
 $lang["initial_number_of_the_proposal"] = "Initial number of the proposal";
 $lang["the_proposals_id_must_be_larger_then_last_proposal_id"] = "The proposals ID must be larger then last proposal ID.";
 $lang["proposal_sent"] = "Proposal sent";
@@ -1879,7 +1879,7 @@ $lang["proposal_accepted_message"] = "You've successfully accepted this proposal
 
 $lang["set_timeline_permissions"] = "Set timeline permissions";
 $lang["cant_see_the_timeline"] = "Can't see the Timeline";
-$lang["can_see_timeline_posts_from_specific_members_or_teams"] = "Can see timeline posts from specific members or teams:";
+$lang["can_see_timeline_posts_from_specific_members_or_teams"] = "Can see timeline posts from specific members or priests:";
 
 $lang["localization"] = "Localization";
 $lang["localization_settings"] = "Localization Settings";
@@ -1903,11 +1903,11 @@ $lang["version"] = "Version";
 $lang["by"] = "By";
 $lang["visit_plugin_site"] = "Visit plugin site";
 
-$lang["can_manage_team_members_job_information"] = "Can manage team member's job information?";
+$lang["can_manage_team_members_job_information"] = "Can manage priest member's job information?";
 
 $lang["add_filter"] = "Add filter";
-$lang["specific_client_groups"] = "Specific client groups";
-$lang["choose_client_groups"] = "Choose client groups";
+$lang["specific_client_groups"] = "Specific parish groups";
+$lang["choose_client_groups"] = "Choose parish groups";
 
 $lang["checklist_template"] = "Checklist Template";
 $lang["add_checklist_template"] = "Add checklist template";
@@ -1940,7 +1940,7 @@ $lang["invoice_manual_payment_added"] = "Invoice manual payment added";
 $lang["notification_invoice_manual_payment_added"] = "Added a manual payment.";
 
 $lang["save_as_note"] = "Save as note";
-$lang["client_will_not_see_any_notes"] = "Client will not see any notes.";
+$lang["client_will_not_see_any_notes"] = "Parish will not see any notes.";
 
 $lang["prospects"] = "Prospects";
 $lang["estimate_forms"] = "Estimate Forms";
@@ -1962,7 +1962,7 @@ $lang["imap_encryption_help_message"] = "Different server could work with differ
 $lang["administration_permissions"] = "Administration permissions";
 $lang["can_manage_all_kinds_of_settings"] = "Can manage all kinds of settings";
 $lang["can_manage_user_role_and_permissions"] = "Can manage user role and permissions";
-$lang["can_add_or_invite_new_team_members"] = "Can add/invite new team members";
+$lang["can_add_or_invite_new_team_members"] = "Can add/invite new priest members";
 
 $lang["add_signature_option_on_accepting_proposal"] = "Add signature option on accepting proposal";
 $lang["accept"] = "Accept";
@@ -1981,7 +1981,7 @@ $lang["save_and_continue"] = "Save & continue";
 $lang["add_new_project_member"] = "Add new project member";
 
 $lang["field_type_time"] = "Time";
-$lang["client_can_assign_tasks"] = "Client can assign tasks?";
+$lang["client_can_assign_tasks"] = "Parish can assign tasks?";
 $lang["can_create_lead_from_public_form"] = "Can create lead from public form";
 $lang["lead_html_form_code"] = "Lead creation HTML form code";
 
@@ -1994,39 +1994,39 @@ $lang["notification_estimate_commented"] = "Commented on an estimate.";
 $lang["contacts_logged_in_today"] = "Contacts logged in today";
 $lang["contacts_logged_in_last_seven_days"] = "Contacts logged in last 7 days";
 
-$lang["clients_has_unpaid_invoices"] = "Clients has unpaid invoices";
-$lang["clients_has_partially_paid_invoices"] = "Clients has partially paid invoices";
-$lang["clients_has_overdue_invoices"] = "Clients has overdue invoices";
+$lang["clients_has_unpaid_invoices"] = "Parishes has unpaid invoices";
+$lang["clients_has_partially_paid_invoices"] = "Parishes has partially paid invoices";
+$lang["clients_has_overdue_invoices"] = "Parishes has overdue invoices";
 
-$lang["of_total_clients"] = "of total clients";
+$lang["of_total_clients"] = "of total Parishes";
 
 $lang["has_canceled_projects"] = "Has canceled projects";
-$lang["clients_has_open_projects"] = "Clients has open projects";
-$lang["clients_has_hold_projects"] = "Clients has hold projects";
-$lang["clients_has_completed_projects"] = "Clients has completed projects";
-$lang["clients_has_canceled_projects"] = "Clients has canceled projects";
+$lang["clients_has_open_projects"] = "Parishes has open projects";
+$lang["clients_has_hold_projects"] = "Parishes has hold projects";
+$lang["clients_has_completed_projects"] = "Parishes has completed projects";
+$lang["clients_has_canceled_projects"] = "Parishes has canceled projects";
 
 $lang["has_open_estimates"] = "Has open estimates";
 $lang["has_accepted_estimates"] = "Has accepted estimates";
 $lang["has_new_estimate_requests"] = "Has new estimate requests";
 $lang["has_estimate_requests_in_progress"] = "Has estimate requests in progress";
-$lang["clients_has_open_estimates"] = "Client has open estimates";
-$lang["clients_has_accepted_estimates"] = "Clients has accepted estimates";
-$lang["clients_has_new_estimate_requests"] = "Clients has new estimate requests";
-$lang["clients_has_estimate_requests_in_progress"] = "Clients has estimate requests in progress";
+$lang["clients_has_open_estimates"] = "Parish has open estimates";
+$lang["clients_has_accepted_estimates"] = "Parishes has accepted estimates";
+$lang["clients_has_new_estimate_requests"] = "Parishes has new estimate requests";
+$lang["clients_has_estimate_requests_in_progress"] = "Parishes has estimate requests in progress";
 
 $lang["has_open_tickets"] = "Has open tickets";
-$lang["clients_has_open_tickets"] = "Clients has open tickets";
+$lang["clients_has_open_tickets"] = "Parishes has open tickets";
 
 $lang["has_new_orders"] = "Has new orders";
-$lang["clients_has_new_orders"] = "Clients has new orders";
+$lang["clients_has_new_orders"] = "Parishes has new orders";
 
 $lang["has_open_proposals"] = "Has open proposals";
 $lang["has_accepted_proposals"] = "Has accepted proposals";
 $lang["has_rejected_proposals"] = "Has rejected proposals";
 $lang["clients_has_open_proposals"] = "Clients has open proposals";
-$lang["clients_has_accepted_proposals"] = "Clients has accepted proposals";
-$lang["clients_has_rejected_proposals"] = "Clients has rejected proposals";
+$lang["clients_has_accepted_proposals"] = "Parishes has accepted proposals";
+$lang["clients_has_rejected_proposals"] = "Parishes has rejected proposals";
 
 $lang["logged_in_today"] = "Logged in today";
 $lang["logged_in_last_seven_days"] = "Logged in last 7 days";
@@ -2049,7 +2049,7 @@ $lang["clone_contract"] = "Clone contract";
 $lang["contract_to"] = "Contract to";
 $lang["contract_settings"] = "Contract settings";
 $lang["contract_color"] = "Contract color";
-$lang["send_contract_bcc_to"] = "When sending contract to client, send BCC to";
+$lang["send_contract_bcc_to"] = "When sending contract to parish, send BCC to";
 $lang["initial_number_of_the_contract"] = "Initial number of the contract";
 $lang["the_contracts_id_must_be_larger_then_last_contract_id"] = "The contracts ID must be larger then last contract ID.";
 $lang["contract_sent"] = "Contract sent";
@@ -2088,7 +2088,7 @@ $lang["accept_estimate"] = "Accept estimate";
 
 $lang["sub_tasks_completed"] = "Sub tasks completed";
 
-$lang["client_portal"] = "Client portal";
+$lang["client_portal"] = "Parish portal";
 $lang["sales_and_prospects"] = "Sales & Prospects";
 
 $lang["contract_prefix"] = "Contract prefix";
@@ -2115,7 +2115,7 @@ $lang["was_this_article_helpful"] = "Was this article helpful?";
 $lang["thank_you_for_your_feedback"] = "Thank you for your feedback.";
 $lang["feedback"] = "Feedback";
 
-$lang["add_signature_option_for_team_members"] = "Add signature option for team members";
+$lang["add_signature_option_for_team_members"] = "Add signature option for priest members";
 $lang["sign_contract"] = "Sign contract";
 
 $lang["remove_task_statuses"] = "Remove task statuses";
@@ -2127,7 +2127,7 @@ $lang["reject_estimate"] = "Reject estimate";
 
 $lang["unknown_user"] = "Unknown user";
 
-$lang["yes_specific_client_groups"] = "Yes, specific client groups";
+$lang["yes_specific_client_groups"] = "Yes, specific parish groups";
 
 /* Version 3.1 */
 
@@ -2149,7 +2149,7 @@ $lang["do_not_show_projects"] = "Don't show projects";
 
 $lang["show_in_kanban"] = "Show in kanban";
 $lang["project_name"] = "Project name";
-$lang["client_name"] = "Client name";
+$lang["client_name"] = "Parish name";
 
 $lang["import_date_error_message"] = "Date format is invalid.";
 
@@ -2180,7 +2180,7 @@ $lang["all_plugins"] = "All plugins";
 
 $lang["payments_summary"] = "Payments Summary";
 $lang["yearly_summary"] = "Yearly summary";
-$lang["clients_summary"] = "Clients summary";
+$lang["clients_summary"] = "Parishes summary";
 
 $lang["import_leave_status_error_message"] = "Status is invalid. Valid statuses are: ";
 
@@ -2188,7 +2188,7 @@ $lang["import_expense"] = "Import expense";
 
 $lang["mark_as_default"] = "Mark as default";
 $lang["remove_as_default"] = "Remove as default";
-$lang["staff_default_dashboard_help_message"] = "This will replace the default dashboard for all team members. Please note that, the widgets will be distributed as per user's permission.";
+$lang["staff_default_dashboard_help_message"] = "This will replace the default dashboard for all priest members. Please note that, the widgets will be distributed as per user's permission.";
 
 /* Version 3.2 */
 
@@ -2205,7 +2205,7 @@ $lang["minutes"] = "Minutes";
 $lang["reminder_sound_volume"] = "Reminder sound volume";
 $lang["reminder_details"] = "Reminder details";
 $lang["mark_as_done"] = "Mark as done";
-$lang["client_can_create_reminders"] = "Client can create reminders?";
+$lang["client_can_create_reminders"] = "Parish can create reminders?";
 
 $lang["php_file_format_is_not_allowed"] = "PHP file format is not allowed!";
 
@@ -2227,14 +2227,14 @@ $lang["other"] = "Other";
 
 $lang["print_estimate"] = "Print estimate";
 
-$lang["the_person_who_will_manage_this_client"] = "The person who'll manage this client.";
+$lang["the_person_who_will_manage_this_client"] = "The person who'll manage this parish.";
 $lang["the_person_who_will_manage_this_lead"] = "The person who'll manage this lead.";
 
 $lang["language_key"] = "Language Key";
 $lang["left_menu_language_key_recommendation_help_text"] = "Recommended to use any prefix like left_menu_";
 
 $lang["project_type"] = "Project type";
-$lang["client_project"] = "Client Project";
+$lang["client_project"] = "Parish Project";
 $lang["internal_project"] = "Internal Project";
 
 $lang["contact_info"] = "Contact info";
@@ -2245,7 +2245,7 @@ $lang["person"] = "Person";
 $lang["last_announcement"] = "Last announcement";
 $lang["no_announcement_yet"] = "No announcement yet!";
 
-$lang["team_members_overview"] = "Team Members Overview";
+$lang["team_members_overview"] = "Priest Members Overview";
 $lang["on_leave_today"] = "On leave today";
 
 $lang["enable_embedded_form_to_get_leads"] = "Enable embedded form to get leads";
