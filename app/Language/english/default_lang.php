@@ -1033,10 +1033,10 @@ $lang["add_a_todo"] = "Add a to do...";
 
 /* Version 1.9 */
 
-$lang["client_groups"] = "Parish groups";
-$lang["add_client_group"] = "Add Parish group";
-$lang["edit_client_group"] = "Edit Parish group";
-$lang["delete_client_group"] = "Delete Parish group";
+$lang["client_groups"] = "Parish circle";
+$lang["add_client_group"] = "Add Parish circle";
+$lang["edit_client_group"] = "Edit Parish circle";
+$lang["delete_client_group"] = "Delete Parish circle";
 
 $lang["ticket_prefix"] = "Ticket prefix";
 $lang["add_a_task"] = "Add a task...";
@@ -1324,7 +1324,7 @@ $lang["lead_status"] = "Lead status";
 $lang["add_lead_status"] = "Add lead status";
 $lang["edit_lead_status"] = "Edit lead status";
 $lang["delete_lead_status"] = "Delete lead status";
-$lang["owner"] = "Owner";
+$lang["owner"] = "Parish priest";
 $lang["make_client"] = "Make parish";
 $lang["client_contacts"] = "Parish contacts";
 $lang["lead_contacts"] = "Lead contacts";
@@ -1906,8 +1906,8 @@ $lang["visit_plugin_site"] = "Visit plugin site";
 $lang["can_manage_team_members_job_information"] = "Can manage priest member's job information?";
 
 $lang["add_filter"] = "Add filter";
-$lang["specific_client_groups"] = "Specific parish groups";
-$lang["choose_client_groups"] = "Choose parish groups";
+$lang["specific_client_groups"] = "Specific parish Circles";
+$lang["choose_client_groups"] = "Choose parish Circles";
 
 $lang["checklist_template"] = "Checklist Template";
 $lang["add_checklist_template"] = "Add checklist template";
@@ -2127,7 +2127,7 @@ $lang["reject_estimate"] = "Reject estimate";
 
 $lang["unknown_user"] = "Unknown user";
 
-$lang["yes_specific_client_groups"] = "Yes, specific parish groups";
+$lang["yes_specific_client_groups"] = "Yes, specific parish circles";
 
 /* Version 3.1 */
 
@@ -2227,8 +2227,8 @@ $lang["other"] = "Other";
 
 $lang["print_estimate"] = "Print estimate";
 
-$lang["the_person_who_will_manage_this_client"] = "The person who'll manage this parish.";
-$lang["the_person_who_will_manage_this_lead"] = "The person who'll manage this lead.";
+$lang["the_person_who_will_manage_this_client"] = "The priest who'll manage this parish.";
+$lang["the_person_who_will_manage_this_lead"] = "The priest who'll manage this lead.";
 
 $lang["language_key"] = "Language Key";
 $lang["left_menu_language_key_recommendation_help_text"] = "Recommended to use any prefix like left_menu_";
@@ -2239,8 +2239,8 @@ $lang["internal_project"] = "Internal Project";
 
 $lang["contact_info"] = "Contact info";
 $lang["type"] = "Type";
-$lang["organization"] = "Organization";
-$lang["person"] = "Person";
+$lang["organization"] = "Shrine";
+$lang["person"] = "Parish";
 
 $lang["last_announcement"] = "Last announcement";
 $lang["no_announcement_yet"] = "No announcement yet!";
