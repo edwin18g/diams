@@ -228,7 +228,7 @@ $lang["delete_announcement"] = "Delete announcement";
 $lang["announcement"] = "Announcement";
 $lang["announcements"] = "Announcements";
 $lang["all_team_members"] = "All team members";
-$lang["all_team_clients"] = "All Clients";
+$lang["all_team_clients"] = "All parishes";
 
 /* settings */
 $lang["app_settings"] = "App Settings";
@@ -266,10 +266,10 @@ $lang["varification_failed_message"] = "Sorry, we could not verify your item pur
 $lang["enter_one_ip_per_line"] = "Enter one IP per line. Keep it blank to allow all IPs. *Admin users will not be affected.";
 $lang["allow_timecard_access_from_these_ips_only"] = "Allow timecard access from these IPs only.";
 $lang["decimal_separator"] = "Decimal Separator";
-$lang["client_settings"] = "Client settings";
-$lang["disable_client_login_and_signup"] = "Disable client login and signup";
-$lang["disable_client_login_help_message"] = "Client contacts will not be able to login/sign up in this system until you revert this setting.";
-$lang["who_can_send_or_receive_message_to_or_from_clients"] = "Who can send/receive message to/from clients";
+$lang["client_settings"] = "parish settings";
+$lang["disable_client_login_and_signup"] = "Disable parish login and signup";
+$lang["disable_client_login_help_message"] = "Parish contacts will not be able to login/sign up in this system until you revert this setting.";
+$lang["who_can_send_or_receive_message_to_or_from_clients"] = "Who can send/receive message to/from parishes";
 
 /* account */
 $lang["authentication_failed"] = "Authentication failed!";
@@ -286,9 +286,9 @@ $lang["password_reset_successfully"] = "Your password has been reset successfull
 $lang["account_created"] = "Your account has been created successfully!";
 $lang["invitation_expaired_message"] = "The invitation has expired or something went wrong";
 $lang["account_already_exists_for_your_mail"] = "Account already exists for your email address.";
-$lang["create_an_account_as_a_new_client"] = "Create an account as a new client.";
+$lang["create_an_account_as_a_new_client"] = "Create an account as a new parish.";
 $lang["create_an_account_as_a_team_member"] = "Create an account as a team member.";
-$lang["create_an_account_as_a_client_contact"] = "Create an account as a client contact.";
+$lang["create_an_account_as_a_client_contact"] = "Create an account as a parish contact.";
 
 /* messages */
 $lang["messages"] = "Messages";
@@ -307,12 +307,12 @@ $lang["me"] = "Me";
 $lang["select_a_message"] = "Select a message to view";
 
 /* clients */
-$lang["add_client"] = "Add client";
-$lang["edit_client"] = "Edit client";
-$lang["delete_client"] = "Delete client";
-$lang["client"] = "Client";
-$lang["clients"] = "Clients";
-$lang["client_details"] = "Client details";
+$lang["add_client"] = "Add parish";
+$lang["edit_client"] = "Edit parish";
+$lang["delete_client"] = "Delete parish";
+$lang["client"] = "parish";
+$lang["clients"] = "Parishes";
+$lang["client_details"] = "parish details";
 $lang["due"] = "Due";
 
 $lang["add_contact"] = "Add contact";
@@ -470,7 +470,7 @@ $lang["add_ticket"] = "Add ticket";
 $lang["ticket"] = "Ticket";
 $lang["tickets"] = "Tickets";
 $lang["ticket_id"] = "Ticket ID";
-$lang["client_replied"] = "Client replied";
+$lang["client_replied"] = "parish replied";
 $lang["change_status"] = "Change status";
 $lang["last_activity"] = "Last activity";
 $lang["open_tickets"] = "Open tickets";
@@ -527,7 +527,7 @@ $lang["last_email_sent"] = "Last email sent";
 $lang["item_library"] = "Item library";
 $lang["add_payment"] = "Add payment";
 $lang["never"] = "Never";
-$lang["email_invoice_to_client"] = "Email invoice to client";
+$lang["email_invoice_to_client"] = "Email invoice to parish";
 $lang["download_pdf"] = "Download PDF";
 $lang["print"] = "Print";
 $lang["actions"] = "Actions";
@@ -547,7 +547,7 @@ $lang["template_restored"] = "The template has been restored to default.";
 $lang["login_info"] = "Login info";
 $lang["reset_password"] = "Reset password";
 $lang["team_member_invitation"] = "Team member invitation";
-$lang["client_contact_invitation"] = "Client contact invitation";
+$lang["client_contact_invitation"] = "Parish contact invitation";
 $lang["send_invoice"] = "Send invoice";
 $lang["signature"] = "Signature";
 
@@ -572,7 +572,7 @@ $lang["can_manage_team_members_leave"] = "Can manage team member's leaves?";
 $lang["can_manage_team_members_timecards"] = "Can manage team member's time cards?";
 $lang["can_access_invoices"] = "Can access invoices?";
 $lang["can_access_expenses"] = "Can access expenses?";
-$lang["can_access_clients_information"] = "Can access client's information?";
+$lang["can_access_clients_information"] = "Can access parish's information?";
 $lang["can_access_tickets"] = "Can access tickets?";
 $lang["can_manage_announcements"] = "Can manage announcements?";
 
@@ -597,14 +597,14 @@ $lang["second_tax"] = "Second TAX";
 
 /* Version 1.2 */
 $lang["available_on_invoice"] = "Available on Invoice";
-$lang["available_on_invoice_help_text"] = "The payment method will be appear in client's invoices.";
+$lang["available_on_invoice_help_text"] = "The payment method will be appear in parishes invoices.";
 $lang["minimum_payment_amount"] = "Minimum payment amount";
-$lang["minimum_payment_amount_help_text"] = "Clients will not be able to pay the invoice using this payment method, if the invoice value less than this value.";
+$lang["minimum_payment_amount_help_text"] = "Parishes will not be able to pay the invoice using this payment method, if the invoice value less than this value.";
 $lang["pay_invoice"] = "Pay Invoice";
 $lang["pay_button_text"] = "Pay button text";
 $lang["minimum_payment_validation_message"] = "The payment amount can't be less then: "; //ex. The payment amount can't be less then: USD 100.00
 $lang["invoice_settings"] = "Invoice Settings";
-$lang["allow_partial_invoice_payment_from_clients"] = "Allow partial payment from clients";
+$lang["allow_partial_invoice_payment_from_clients"] = "Allow partial payment from parishes";
 $lang["invoice_color"] = "Invoice Color";
 $lang["invoice_footer"] = "Invoice Footer";
 $lang["invoice_preview"] = "Invoice Preview";
@@ -615,10 +615,10 @@ $lang["rows_per_page"] = "Rows per page";
 $lang["price"] = "Price";
 $lang["security_type"] = "Security Type";
 
-$lang["client_can_view_tasks"] = "Client can view tasks?";
-$lang["client_can_create_tasks"] = "Client can create tasks?";
-$lang["client_can_edit_tasks"] = "Client can edit tasks?";
-$lang["client_can_comment_on_tasks"] = "Client can comment on tasks?";
+$lang["client_can_view_tasks"] = "Parish can view tasks?";
+$lang["client_can_create_tasks"] = "Parishes can create tasks?";
+$lang["client_can_edit_tasks"] = "Parishes can edit tasks?";
+$lang["client_can_comment_on_tasks"] = "parishes can comment on tasks?";
 
 $lang["set_project_permissions"] = "Set project permissions";
 $lang["can_create_projects"] = "Can create projects";
@@ -636,7 +636,7 @@ $lang["can_delete_files"] = "Can delete files";
 
 /* Version 1.2.2 */
 $lang["label"] = "Label";
-$lang["send_bcc_to"] = "When sending invoice to client, send BCC to";
+$lang["send_bcc_to"] = "When sending invoice to parish, send BCC to";
 $lang["mark_project_as_completed"] = "Mark Project as Completed";
 $lang["mark_project_as_canceled"] = "Mark Project as Canceled";
 $lang["mark_project_as_open"] = "Mark Project as Open";
@@ -669,7 +669,7 @@ $lang["project_comment_added"] = "Project comment added";
 $lang["project_comment_replied"] = "Project comment replied";
 $lang["project_customer_feedback_added"] = "Project customer feedback added";
 $lang["project_customer_feedback_replied"] = "Project customer feedback replied";
-$lang["client_signup"] = "Client signup";
+$lang["client_signup"] = "parish signup";
 $lang["invoice_online_payment_received"] = "Invoice online payment received";
 $lang["leave_application_submitted"] = "Leave application submitted";
 $lang["leave_approved"] = "Leave approved";
@@ -682,8 +682,8 @@ $lang["ticket_closed"] = "Ticket closed";
 $lang["ticket_reopened"] = "Ticket reopened";
 $lang["leave"] = "Leave";
 
-$lang["client_primary_contact"] = "Primary contact of client";
-$lang["client_all_contacts"] = "All contacts of client";
+$lang["client_primary_contact"] = "Primary contact of parish";
+$lang["client_all_contacts"] = "All contacts of parish";
 $lang["task_assignee"] = "Task assignee";
 $lang["task_collaborators"] = "Task collaborators";
 $lang["comment_creator"] = "Comment creator";
@@ -713,7 +713,7 @@ $lang["notification_project_comment_added"] = "Commented on a project.";
 $lang["notification_project_comment_replied"] = "Replied on a project comment.";
 $lang["notification_project_customer_feedback_added"] = "Commented on a project.";
 $lang["notification_project_customer_feedback_replied"] = "Replied on a comment.";
-$lang["notification_client_signup"] = "Signed up as a new client."; //Mr. X signed up as a new client.
+$lang["notification_client_signup"] = "Signed up as a new parish."; //Mr. X signed up as a new client.
 $lang["notification_invoice_online_payment_received"] = "Submitted an online payment.";
 $lang["notification_leave_application_submitted"] = "Submitted a leave application.";
 $lang["notification_leave_approved"] = "Approved a leave of %s."; //Approved a leave of Mr. X
@@ -728,11 +728,11 @@ $lang["notification_ticket_reopened"] = "Reopened the ticket.";
 $lang["general_notification"] = "General notification";
 
 $lang["disable_online_payment"] = "Disable online payment";
-$lang["disable_online_payment_description"] = "Hide online payment options in invoice for this client.";
+$lang["disable_online_payment_description"] = "Hide online payment options in invoice for this parish.";
 
-$lang["client_can_view_project_files"] = "Client can view project files?";
-$lang["client_can_add_project_files"] = "Client can add project files?";
-$lang["client_can_comment_on_files"] = "Client can comment on files?";
+$lang["client_can_view_project_files"] = "parish can view project files?";
+$lang["client_can_add_project_files"] = "parish can add project files?";
+$lang["client_can_comment_on_files"] = "parish can comment on files?";
 $lang["mark_invoice_as_not_paid"] = "Mark as Not paid"; //Change invoice status to Not Paid
 
 $lang["set_team_members_permission"] = "Set team members permissions";
