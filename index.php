@@ -1,11 +1,38 @@
 <?php
 $_SERVER['CI_ENVIRONMENT'] = 'development';
+
+
+
+        if($_SERVER['HTTP_HOST'] == 'dio.local')
+{
+    define('HOSTNAME', 'localhost');
+    define('USERNAME', 'root');
+    define('PASSWORD', 'root');
+    define('DATABASE', 'dio_new');
+}elseif($_SERVER['HTTP_HOST'] == 'dio.local.com')
+{
+    define('HOSTNAME', 'localhost');
+    define('USERNAME', 'root');
+    define('PASSWORD', 'Root@123');
+    define('DATABASE', 'dio_new');
+}else
+{
+    define('HOSTNAME', 'localhost');
+    define('USERNAME', 'edwinpok_Stream');
+    define('PASSWORD', '12345678');
+    define('DATABASE', 'edwinpok_dioms');
+}
+
+
+
 // Valid PHP Version?
 $minPHPVersion = '7.3';
 if (version_compare(PHP_VERSION, $minPHPVersion, '<')) {
     die("Your PHP version must be {$minPHPVersion} or higher to run CodeIgniter. Current version: " . PHP_VERSION);
 }
 unset($minPHPVersion);
+
+
 
 //set the variable to 'installed' after installation
 $app_state = "installed";
