@@ -33,6 +33,10 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Frontend::index');
 $routes->get('parish', 'Frontend::parish');
+$routes->get('priest', 'Frontend::priests');
+
+
+
 
 
 //custom routing for custom pages

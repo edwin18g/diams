@@ -30,6 +30,15 @@ class Frontend extends App_Controller {
         return view('frontend_layout', ['pageName'=>$pagename,'parishList'=>$parishList]);
     }
 
+    public function priests() {
+        $priests = $this->Users_model->get_details()->getResultArray();
+
+  
+        $pagename = 'priests';//view('parish');
+        // die('k');
+        return view('frontend_layout', ['pageName'=>$pagename,'priests'=>$priests]);
+    }
+
 
     private function _check_widgets_permissions() {
         if ($this->login_user->user_type === "staff" && $this->show_staff_on_staff) {
